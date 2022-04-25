@@ -1,13 +1,11 @@
 import "./Header.css";
-import fundo from "../Assets/img/Fundo.svg";
-import logo from "../Assets/img/LOGOTIPO 1.svg";
-import busca from "../Assets/img/search 1.svg";
+import Logo from "../Logo/Logo";
+
 
 function Header() {
     return (
         <div className="header-nav">
-            <img src={logo} />
-            <img src={busca} />
+            <Logo />
         </div>
     );
 }

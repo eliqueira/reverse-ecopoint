@@ -2,3 +2,7 @@
     margin: 0;
 }
 
+Header {
+    background-image: url(../../../Assets/img/Fundo.svg);
+    position: relative;
+}

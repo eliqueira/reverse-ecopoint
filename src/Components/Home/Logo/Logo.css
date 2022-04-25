@@ -1,0 +1,19 @@
+.logo {
+    background-color:black ;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    margin: auto;
+}
+
+.busca{
+    color: aliceblue;
+    font-size: 50px;
+    width: 1000px;
+}
+
+.menu{
+    color: aliceblue;
+    font-size: 50px;
+    width: 300px; 
+}
