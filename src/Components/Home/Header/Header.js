@@ -1,9 +1,7 @@
 import "./Header.css";
-import fun from "../Assets/img/Fundo.svg"
-import logo from "../Assets/img/LOGOTIPO 1.svg"
-import busca from !"../Assets/img/search 1.svg"
-
-
+import fundo from "../Assets/img/Fundo.svg";
+import logo from "../Assets/img/LOGOTIPO 1.svg";
+import busca from "../Assets/img/search 1.svg";
 
 function Header() {
     return (
@@ -13,5 +11,4 @@ function Header() {
         </div>
     );
 }
-
 export default Header;
