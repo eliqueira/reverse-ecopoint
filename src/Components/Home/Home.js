@@ -1,8 +1,8 @@
 import "./Home.css"
-import Header from "./Header/Header";
-import Nav from "./NavBar/Nav";
+import Header from "./Header/Header"
+import Nav from "./NavBar/Nav"
 
-function App() {
+function Home() {
     return (
     <>
     <Header />
@@ -11,4 +11,4 @@ function App() {
     );
 }
   
-export default Home;
+export default Home   
