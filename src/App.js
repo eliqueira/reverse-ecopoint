@@ -1,8 +1,3 @@
-import ExemploContexto from './Components/UseContext/ExemploContexto';
-import LangContext from './Components/UseContext/LangContext';
-import ApiIntegrantion from 'Components/Home/ApiIntegrantion';
-import { useState } from 'react';
-
 import './App.css';
 import Home from './Components/Home/Home';
 
