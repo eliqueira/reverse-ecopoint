@@ -1,7 +1,7 @@
 import "./Logo.css"
 import logo from '../../../Assets/img/logotipo.svg'
-import { BiSearchAlt } from "react-icons/bi"
-import { IoIosMenu } from "react-icons/io"
+// import { BiSearchAlt } from "react-icons/bi"
+// import { IoIosMenu } from "react-icons/io"
 
 function Logo ()  {
     return (

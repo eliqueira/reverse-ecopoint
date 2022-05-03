@@ -1,30 +1,28 @@
 import './App.css';
 import Home from './Components/Home/Home';
 import { Routes, Route} from "react-router-dom";
-import Logo from 'Components/Home/Logo/Logo';
-import Nav from 'Components/Home/NavBar/Nav';
-import FormUser from 'Components/Home/FormUser';
+import FormUser from './Components/Home/FormUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EditUserOnChange from './Components/Home/EditUserOnChange'
+import NotFound from './Pages/NotFound'
+import ApiIntegrantion from './Components/Home/ApiIntegrantion';
+import Menu from './Components/Home/Menu';
 
 
 function App() {
 
 
   return (
-    // <LangContext.Provider value={[
-    //   currentLang === 'br' 
-    //   ? lang.br 
-    //   : lang.en,
-    //   toggleLanguage,
-    //   setCurrentLanguage
-    // ]}>
     <div className="App">
-      <h1>Welcome to React Router!</h1>
+      <Menu />
     <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="logo" element={<Logo/>} />
-        <Route path="nav" element={<Nav/>} />
         <Route path="form" element={<FormUser/>} />
+        <Route path="api-integration" >
+            <Route index element={<ApiIntegrantion />}/>
+            <Route path="edit/:userId" element={<EditUserOnChange />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
     </Routes>
     </div>
   );
@@ -32,10 +30,17 @@ function App() {
 
 export default App
 
+// <LangContext.Provider value={[
+//   currentLang === 'br' 
+//   ? lang.br 
+//   : lang.en,
+//   toggleLanguage,
+//   setCurrentLanguage
+// ]}>
 
 //   const lang = {
-//     br: {
-//       welcome: 'Bem-Vindo',
+  //     br: {
+    //       welcome: 'Bem-Vindo',
 //       changeLanguage: 'Alterar Idioma',
 //       portuguese: 'Português',
 //       english: 'Inglês',
@@ -56,15 +61,15 @@ export default App
 //   const newLanguage = currentLang === 'br' ? 'en' : 'br'
 //   setCurrentLanguage(newLanguage)
 //  }
-      {/* <LangContext.Provider value={[
-          currentLang === 'br' 
-          ? lang.br 
-          : lang.en,
-          toggleLanguage,
-          setCurrentLanguage
-        ]}>
-        <div className="App">
-          <ExemploContexto/>
-        </div>
-      </LangContext.Provider> */}
-      {/* <ApiIntegrantion /> */}
+      //  <LangContext.Provider value={[
+      //     currentLang === 'br' 
+      //     ? lang.br 
+      //     : lang.en,
+      //     toggleLanguage,
+      //     setCurrentLanguage
+      //   ]}>
+      //   <div className="App">
+      //     <ExemploContexto/>
+      //   </div>
+      // </LangContext.Provider> 
+      // <ApiIntegrantion /> 
