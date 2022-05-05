@@ -5,12 +5,16 @@
     height: 1100px;
 }
 
-.ini>letra{
+.ini>h1{
     font-family: 'Gurajada';
     font-weight: 400;
     color: aliceblue;
     font-size: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
+
 
 
 
