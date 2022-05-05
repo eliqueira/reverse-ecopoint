@@ -1,23 +1,31 @@
 import "./MainNav.css"
 import Nav from 'react-bootstrap/Nav'
+import { Link } from 'react-router-dom'
+import Logo from "../Logo/Logo"
+import Logo2 from "../Logo/Logo2/Logo2"
 
 
 function MainNav ()  {
     return( 
         <>
-        <Nav
-            active Key="/home"
-            onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-        >
-            <Nav.Item>
-                <Nav.Link href="/home">Active</Nav.Link>
+        <Nav className="head">
+            <Logo/>
+            <Nav.Item className="n fs-4">
+                <Link className="na" to="/">
+                    Sobre
+                </Link>
             </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-1">Link</Nav.Link>
+            <Nav.Item className ="n fs-4">
+                <Link className="na" to="ebook">
+                    E-books                
+                </Link>
             </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-2">Link</Nav.Link>
+            <Nav.Item className ="n fs-4">
+                <Link  className="na" to="ecopoint">
+                    Ecopontos                
+                </Link>
             </Nav.Item>
+            <Logo2 />
         </Nav>      
         </>
     )

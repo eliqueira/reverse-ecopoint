@@ -1,12 +1,11 @@
 import './App.css';
 import Home from './Components/Home/Home';
 import { Routes, Route} from "react-router-dom";
-import FormUser from './Components/Home/FormUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import EditUserOnChange from './Components/Home/EditUserOnChange'
 import NotFound from './Pages/NotFound'
-import ApiIntegrantion from './Components/Home/ApiIntegrantion';
-import Menu from './Components/Home/Menu';
+import Ebook from './Pages/Ebook/Ebook';
+
+
 
 
 function App() {
@@ -14,14 +13,14 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
     <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="form" element={<FormUser/>} />
+        <Route path="ebook" element={<Ebook/>} />
+        {/* <Route path="form" element={<FormUser/>} />
         <Route path="api-integration" >
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:userId" element={<EditUserOnChange />} />
-        </Route>
+        </Route> */}
         <Route path="*" element={<NotFound />} />
     </Routes>
     </div>

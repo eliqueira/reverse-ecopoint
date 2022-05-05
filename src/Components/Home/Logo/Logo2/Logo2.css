@@ -1,0 +1,15 @@
+.insta{
+    display: flex;
+}
+
+.insta>img{
+    width: 25px;
+}
+
+.phone{
+    display: flex;
+}
+
+.phone>img{
+    width: 25px;
+}

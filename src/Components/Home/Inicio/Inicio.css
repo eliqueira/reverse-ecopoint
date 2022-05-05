@@ -1,0 +1,22 @@
+.ini{
+    background-image: url(../../../Assets/img/Fundo.svg);
+    position: relative;
+    width: 100%;
+    height: 1100px;
+}
+
+.ini>letra{
+    font-family: 'Gurajada';
+    font-weight: 400;
+    color: aliceblue;
+    font-size: 70px;
+}
+
+
+
+
+
+
+
+
+

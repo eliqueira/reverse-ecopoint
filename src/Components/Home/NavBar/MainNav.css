@@ -1,9 +1,24 @@
-*{
-    margin: 0;
+.head{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.n{
+    font-family: 'Gurajada';
+    padding: 30px;
 }
 
-.MainNav>Nav.Link{
+.na{
     color: aliceblue;
+    text-decoration: none;
+    transition: background-color .5s;
+    
 }
+
+.na:hover{
+    color: #00FF46;
+
+}
+
 
 
