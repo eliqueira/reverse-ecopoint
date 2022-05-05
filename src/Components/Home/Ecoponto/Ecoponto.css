@@ -1,0 +1,21 @@
+.eco>h1{
+    font-family: 'Gurajada';
+    font-size: 85px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.point{
+    font-family: 'Gurajada';
+    display: flex;
+    justify-content: end;
+    margin-right: 50px; 
+    color: black;
+    text-decoration:double;
+    transition: 0.5s;
+}
+
+.point:hover{
+    color: #00FF46;
+}

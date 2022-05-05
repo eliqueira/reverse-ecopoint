@@ -1,5 +1,7 @@
 import "./Inicio.css"
 import lixo from '../../../Assets/img/lixo.svg'
+import { BsArrowDown } from "react-icons/bs";
+
 
 function Inicio ()  {
     return (
@@ -7,13 +9,20 @@ function Inicio ()  {
         <div className="ini">
             <h1>
                 Saiba como se conscientizar
-                como descartar corretamente
-                os resíduos sólidos através
+                <br></br>
+                <br></br>
+                como descartar corretamente os
+                <br></br>
+                <br></br>
+                resíduos sólidos através
                 de E-books!!!
-                <div className="p-5 d-flex mt-3">
-                    <img className="mt-3" src={lixo}/>
+                <div>
+                    <img className="imagem" src={lixo}/>
                 </div>        
             </h1>
+            <div className="seta">
+                <BsArrowDown/>
+            </div>
         </div>
     </>
     )
