@@ -5,9 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './Pages/NotFound'
 import Ebook from './Pages/Ebook/Ebook';
 
-
-
-
 function App() {
 
 

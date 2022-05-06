@@ -1,9 +1,12 @@
+.eco{
+    background-color: #F2ECEC;
+}
+
 .eco>h1{
     font-family: 'Gurajada';
     font-size: 85px;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
 }
 
 .point{
@@ -12,10 +15,29 @@
     justify-content: end;
     margin-right: 50px; 
     color: black;
-    text-decoration:double;
+    text-decoration:none;
     transition: 0.5s;
 }
 
 .point:hover{
     color: #00FF46;
+}
+
+.point>h5{
+    font-size: 35px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+}
+
+.ec>img{
+    padding: 15px;
+    width: 430px;
+}
+
+.ec>h5{
+    margin-left: 19px;
+    height: 50px;
 }

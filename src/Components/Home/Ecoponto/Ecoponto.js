@@ -9,15 +9,24 @@ function Ecoponto () {
         <div className="eco">
             <h1>ECOPONTOS</h1>
             <Link className='point' to="ecopoint">
-            <h5>Ver todos</h5>
+                <h5>Ver todos</h5>
             </Link>
             <div className='image'>
-            <img src={massagua}/>
-            <img src={martin}/>
-            <img src={golfinho}/>
+                <div className='ec'>
+                    <img src={massagua} alt="Ecoponto do Massaguaçu"/>
+                    <h5>Ecoponto do Massaguaçu</h5>
+                </div>
+                <div className='ec'>
+                    <img src={martin} alt="Ecoponto da Martin de Sá"/>
+                    <h5>Ecoponto do Massaguaçu</h5>
+                </div>
+                <div className='ec'>
+                    <img src={golfinho} alt="Ecoponto do Golfinho"/>
+                    <h5>Ecoponto do Massaguaçu</h5>
+                </div>
             </div>
         </div>
     )
 };
 
-export default Ecoponto"
+export default Ecoponto

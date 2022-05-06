@@ -17,7 +17,7 @@ function Inicio ()  {
                 resíduos sólidos através
                 de E-books!!!
                 <div>
-                    <img className="imagem" src={lixo}/>
+                    <img className="imagem" src={lixo} alt="Imagem do lixo"/>
                 </div>        
             </h1>
             <div className="seta">

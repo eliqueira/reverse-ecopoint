@@ -1,0 +1,55 @@
+.e>h1{
+    font-family: 'Gurajada';
+    font-size: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+.bk{
+    font-family: 'Gurajada';
+    display: flex;
+    justify-content: end;
+    margin-right: 50px; 
+    color: black;
+    text-decoration:none;
+    transition: 0.5s;
+}
+
+.bk:hover{
+    color: #00FF46;
+}
+
+.bk>h5{
+    font-size: 35px;
+}
+
+.b{
+    display: flex;
+    justify-content: center;
+}
+
+.bb{   
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    border-radius: 25px;
+    background-color: #c4c4c4;
+}
+
+.bb>h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.bb>h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb>img{
+    width: 250px;
+    padding: 15px;
+}
