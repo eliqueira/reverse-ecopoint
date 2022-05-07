@@ -1,0 +1,44 @@
+.s{
+    height: 850px;
+    background-color: #0E3E1E;
+}
+
+.h>h1{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding: 50px;
+    margin: 0 0 30px 0;
+}
+
+.i>img{
+    margin-left: 65px;
+}
+ 
+.hh>h5{
+    color: aliceblue;
+    margin-left: 190px;
+    margin-top: 25px;
+}
+
+
+.txt{
+    background-color: black;
+}
+
+.txt>h4{
+    color: aliceblue;
+    margin: -350px 0 0 480px;
+}
+/* .equipe{
+    border:  5px solid #23a74f;
+}
+
+.equipe>h4{
+    color: aliceblue;
+    margin: -450px 0 0 480px;
+}
+
+
+
+ */
