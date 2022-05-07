@@ -25,7 +25,7 @@ function MainNav ()  {
                     Ecopontos                
                 </Link>
             </Nav.Item>
-            <Logo2 />
+            <Logo2/>
         </Nav>      
         </>
     )

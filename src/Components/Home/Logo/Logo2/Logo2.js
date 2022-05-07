@@ -5,10 +5,8 @@ import Phone from '../../../../Assets/img/Phone.svg'
 function Logo2 ()  {
     return( 
         <>
-        <div className='insta p-4'>
+        <div className='social'>
         <img src={Insta} alt='Icon do Instagram'/>
-        </div>
-        <div className='phone'>
         <img src={Phone} alt='Icon de Telefone'/>        
         </div>
         </>

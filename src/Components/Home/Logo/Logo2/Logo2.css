@@ -1,15 +1,9 @@
-.insta{
+.social{
     display: flex;
+    justify-content: right;
 }
 
-.insta>img{
-    width: 25px;
-}
-
-.phone{
-    display: flex;
-}
-
-.phone>img{
-    width: 25px;
+.social>img{
+    padding: 10px;
+    width: 50px;
 }

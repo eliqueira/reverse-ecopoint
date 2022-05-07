@@ -1,3 +1,7 @@
+.e{
+    height: 900px;
+}
+
 .e>h1{
     font-family: 'Gurajada';
     font-size: 85px;
@@ -31,25 +35,46 @@
 .bb{   
     display: flex;
     flex-direction: row-reverse;
+    justify-content: left;
     width: 90%;
     border-radius: 25px;
     background-color: #c4c4c4;
 }
 
-.bb>h5{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.bb>h4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .bb>img{
+    display: flex;
     width: 250px;
     padding: 15px;
+}
+
+.be>h4{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.be>h5{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.bi{
+    border-radius: 25px;
+    background-color: #00FF46;
+    width: 70px;
+    margin: -120px 2px 0 790px;
+}
+
+.bi>h3{
+    font-size: 30px;
+}
+
+.bo{
+    text-decoration: none;
+    color:black;
+    display: flex;
+    justify-content: center;
 }
