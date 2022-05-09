@@ -4,20 +4,23 @@ import { Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './Pages/NotFound'
 import Ebook from './Pages/Ebook/Ebook';
-
+import EditUserOnChange from './Components/Home/EditUserOnChange'
+import FormUser from './Components/Home/FormUser'
+import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 function App() {
 
 
   return (
     <div className="App">
+
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="ebook" element={<Ebook/>} />
-        {/* <Route path="form" element={<FormUser/>} />
+        <Route path="form" element={<FormUser/>} />
         <Route path="api-integration" >
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:userId" element={<EditUserOnChange />} />
-        </Route> */}
+        </Route>
         <Route path="*" element={<NotFound />} />
     </Routes>
     </div>

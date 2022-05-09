@@ -1,4 +1,4 @@
-import {useRef, useEffect} from "react";
+import {useRef, useEffect} from 'react'
 
 const FormUser = ({users, setUsers}) => {
   const nameRef = useRef();
@@ -22,7 +22,7 @@ const FormUser = ({users, setUsers}) => {
         )
         .then((response) => response.json())
         .then((data) => {
-          nameRef.current.value = ''
+        nameRef.current.value = ''
         emailRef.current.value = ''
         passRef.current.value = ''
         nameRef.current.focus()

@@ -21,15 +21,17 @@
     margin-top: 25px;
 }
 
-
-.txt{
-    background-color: black;
+.card{
+    background-color: #1C1818;
+    border-radius: 10px;
+    margin: -400px 0 0 480px;
+    height: 240px;
 }
 
-.txt>h4{
-    color: aliceblue;
-    margin: -350px 0 0 480px;
+.card>h4{
+    font-size: large;
 }
+
 /* .equipe{
     border:  5px solid #23a74f;
 }

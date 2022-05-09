@@ -21,7 +21,7 @@ const EditUser = () => {
         formData.append('email', event.target[1].value)
         formData.append('pass', event.target[2].value)
         fetch(
-            "http://localhost/reverse-api/api/user/create",
+            "http://localhost/reverse-api/api/user/update",
             {method: 'POST', body: formData}
             )
             .then((response) => response.json())
@@ -33,7 +33,6 @@ const EditUser = () => {
                 } else {
                     console.log(data)
                 }
-                //setUsers([data.user, ...users])
             })
     } 
 

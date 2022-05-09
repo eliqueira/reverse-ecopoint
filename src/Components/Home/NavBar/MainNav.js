@@ -11,9 +11,9 @@ function MainNav ()  {
         <Nav className="head">
             <Logo/>
             <Nav.Item className="n fs-4">
-                <Link className="na" to="/">
+                <a className="na" href="#sobre">
                     Sobre
-                </Link>
+                </a>
             </Nav.Item>
             <Nav.Item className ="n fs-4">
                 <Link className="na" to="ebook">
