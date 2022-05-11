@@ -1,0 +1,10 @@
+.f{
+    background-color: black;
+}
+
+.f>h3{
+    font-family: 'Gurajada';
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}

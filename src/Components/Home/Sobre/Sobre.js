@@ -12,20 +12,20 @@ function Sobre () {
                    <div className='hh'>
                         <h5>Eliel Siqueira</h5>
                        <div className='txt'>
-                            <Card className='card' border="---" style={{ width: '850px'}}>
+                            <Card className='card bg bg-dark text-white' border="---" style={{ width: '850px'}}>
                                 <Card.Body>
                                 <Card.Text>
-                                    <h4>
+                                    <h4 className='text-center mt-3'>
                                         Este site foi criado com o intento de trazer informações aos indivíduos que
                                         <br />
                                         <br></br>
                                         querem saber com reutilizar o seu lixo, ou também, como os minérios que
                                         <br></br>
                                         <br></br>
-                                        temos dentro de alguns dispositivos e de alguns materiais incomuns que não
+                                        temos dentro de alguns dispositivos e de alguns materiais incomuns que
                                         <br></br>
                                         <br></br>            
-                                        temos, nem idea de como ele é reutilizado funciona e seus processos. 
+                                        não temos, nem idea de como ele é reutilizado funciona e seus processos. 
                                     </h4>
                                 </Card.Text>
                                 </Card.Body>

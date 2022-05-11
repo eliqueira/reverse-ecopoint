@@ -5,6 +5,7 @@ import Objectiv from "./Objectiv/Objectiv"
 import Ecoponto from "../Home/Ecoponto/Ecoponto"
 import Ebk from "./Ebk/Ebk"
 import Sobre from"./Sobre/Sobre"
+import Fim from "./Fim/Fim"
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
     <Ecoponto />
     <Ebk />
     <Sobre/>
+    <Fim/>
     </>
     );
 }
