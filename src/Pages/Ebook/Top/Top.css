@@ -1,0 +1,13 @@
+.i{
+    background-color: black;
+}
+
+.m{
+    display: flex;
+    justify-content: center;
+}
+
+.m>img{
+    width: 19rem;
+    padding: 15px;
+}
