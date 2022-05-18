@@ -6,11 +6,12 @@ import Cards from "./Cards/Cards";
 
 function Ebook() {
     return (
-        <section className="e">        
+        <div className="a">
         <Top/>
         <Let/>
-        <Cards/>
-        </section>
+        <Cards/>        
+        </div>       
+        
     );
 }
 export default Ebook
