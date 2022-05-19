@@ -7,6 +7,8 @@ import Ebook from './Pages/Ebook/Ebook';
 import EditUserOnChange from './Components/Home/EditUserOnChange'
 import FormUser from './Components/Home/FormUser'
 import ApiIntegrantion from './Components/Home/ApiIntegrantion'
+import Eco from './Pages/Ecopoint/Ecopoint';
+import Local from './Pages/Ecopoint/Local';
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,10 @@ function App() {
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="ebook" element={<Ebook/>} />
+        <Route path="ecopoint">
+          <Route index element={<Eco/>}/>
+          <Route path="local/:ecopontoId" element={<Local/>}/>
+        </Route>
         <Route path="form" element={<FormUser/>} />
         <Route path="api-integration" >
             <Route index element={<ApiIntegrantion />}/>

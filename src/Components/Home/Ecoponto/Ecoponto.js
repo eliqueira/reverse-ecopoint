@@ -1,7 +1,7 @@
 import './Ecoponto.css'
-import massagua from "../../../Assets/img/massagua 1.svg"
-import golfinho from "../../../Assets/img/golfinho 1.svg"
-import martin from "../../../Assets/img/martin 1.svg"
+import massagua from "../../../Assets/img/massagua.svg"
+import golfinho from "../../../Assets/img/golfinho.svg"
+import martin from "../../../Assets/img/martin.svg"
 import { Link } from 'react-router-dom'
 
 function Ecoponto () {
