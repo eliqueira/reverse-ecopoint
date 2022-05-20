@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './Pages/NotFound'
 import Ebook from './Pages/Ebook/Ebook';
 import EditUserOnChange from './Components/Home/EditUserOnChange'
-import FormUser from './Components/Home/FormUser'
 import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 import Eco from './Pages/Ecopoint/Ecopoint';
 import Local from './Pages/Ecopoint/Local';
+import FormEbook from './Components/Home/FormEbook';
 function App() {
   return (
     <div className="App">
@@ -20,7 +20,7 @@ function App() {
           <Route index element={<Eco/>}/>
           <Route path="local/:ecopontoId" element={<Local/>}/>
         </Route>
-        <Route path="form" element={<FormUser/>} />
+        <Route path="form" element={<FormEbook/>} />
         <Route path="api-integration" >
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:userId" element={<EditUserOnChange />} />

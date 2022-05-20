@@ -1,9 +1,8 @@
 import {useRef, useEffect} from 'react'
 
-const FormUser = ({users, setUsers}) => {
+const FormEbook = ({Ebook, setEbook}) => {
   const nameRef = useRef();
-  const emailRef = useRef();
-  const passRef = useRef();
+  const authorRef = useRef();
 
   useEffect(() => {
     nameRef.current.focus()
@@ -14,30 +13,27 @@ const FormUser = ({users, setUsers}) => {
       event.preventDefault()
       const formData = new FormData();
       formData.append('name', event.target[0].value);
-      formData.append('email', event.target[1].value);
-      formData.append('pass', event.target[2].value);
+      formData.append('author', event.target[1].value);
       fetch(
-        "http://localhost/reverse-api/api/user/create",
+        "http://localhost/reverse--api/api/ebook/create",
         {method: 'POST', body: formData}
         )
         .then((response) => response.json())
         .then((data) => {
         nameRef.current.value = ''
-        emailRef.current.value = ''
-        passRef.current.value = ''
+        authorRef.current.value = ''
         nameRef.current.focus()
-          setUsers([data.user ,...users])
+          setEbook([data.ebook ,...Ebook])
         });
     }
 
     return(
     <form onSubmit={(event) => handleSubmit(event)}>
         <label>Nome:</label><input ref={nameRef} type="text" name="name"/>
-      <label>Email:</label><input ref={emailRef} type="email" name="email"/>
-      <label>Senha:</label><input ref={passRef} type="password" name="pass"/>
+      <label>Autor:</label><input ref={authorRef} type="author" name="author"/>
         <input type="submit" value="Cadastrar"/>
     </form>
     )
 }
 
-export default FormUser
+export default FormEbook

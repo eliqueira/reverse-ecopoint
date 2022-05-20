@@ -20,16 +20,21 @@
     margin-left: 23px;
 }
 
-.bots{
+.bot{
+    font-family: 'Gurajada';
     margin: 23px 0 10px 23px;
     border-radius: 10px;
-    background-color: black;
-    color: aliceblue;
-    width: 79px;
+    background-color: #00FF46;
+    color: black;
+    width: 85px;
+    font-size: 25px;
     transition: 0.5s;
+    border: 1px solid black;
 }
 
-.bots:hover{
-    background-color: #00FF46;
-    color: blue;
+.bot:hover{
+    background-color:black;
+    color: aliceblue;
 }
+
+

@@ -1,24 +1,23 @@
-import React from 'react'
-import FormUser from "./FormUser";
+import FormEbook from "./FormEbook";
 import {BsTrash as IconTrash} from "react-icons/bs"
 import { useEffect,useState } from 'react'
 import {TiEdit as IconEdit} from 'react-icons/ti'
 import { useNavigate } from 'react-router-dom'
 
 const ApiIntegrantion = () => {
-const [users, setUsers] = useState(0);
+const [Ebooks, setEbooks] = useState(0);
 const navigate = useNavigate();
 
 useEffect(() => {
-            fetch("http://localhost/reverse-api/api/user/select-all")
+            fetch("http://localhost/reverse-api/api/ebook/select-all")
             .then((response) => response.json())
-            .then((data) => setUsers(data));
+            .then((data) => setEbooks(data));
         }, []);
 
-        const handleTrashClick = (userId) => {
+        const handleTrashClick = (EbookId) => {
           const formData = new FormData();
-          formData.append('id', userId);
-          const urlDelete = "http://localhost/reverse-api/api/user/delete";
+          formData.append('id', EbookId);
+          const urlDelete = "http://localhost/reverse--api/api/ebook/delete";
           fetch(urlDelete, {
             method: 'POST',
             body: formData
@@ -26,28 +25,27 @@ useEffect(() => {
             .then((response) => response.json())
             .then((data) => {
               alert(data.message)
-              let userFiltered = users.filter((user) => { return user.id !== userId});
-              setUsers(userFiltered)
+              let EbookFiltered = Ebooks.filter((ebook) => { return ebook.id !== EbookId});
+              setEbooks(EbookFiltered)
             });
         }
         
 
   return (
     <>
-    <FormUser setUsers={setUsers} users={users}/>
-    {users &&
-      users.map((user) =>{
-        console.log(user)
+    <FormEbook setEbooks={setEbooks} Ebooks={Ebooks}/>
+    {Ebooks &&
+      Ebooks.map((ebook) =>{
       return(
-        <div key={user.id}>
-          <h1>{user.name}</h1>
-          <p>{user.email}</p>
+        <div key={ebook.id}>
+          <h1>{ebook.name}</h1>
+          <p>{ebook.email}</p>
           <IconTrash 
-              onClick={() => handleTrashClick(user.id)}
+              onClick={() => handleTrashClick(ebook.id)}
               style={{cursor: 'pointer'}}
             />
             <IconEdit 
-              onClick={() => navigate('edit/'+user.id)} 
+              onClick={() => navigate('edit/'+ebook.id)} 
               style={{cursor: 'pointer'}}
             />
         </div>
