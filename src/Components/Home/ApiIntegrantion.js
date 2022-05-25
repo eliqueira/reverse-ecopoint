@@ -9,7 +9,7 @@ const [Ebooks, setEbooks] = useState(0);
 const navigate = useNavigate();
 
 useEffect(() => {
-            fetch("http://localhost/reverse-api/api/ebook/select-all")
+            fetch("http://localhost/reverse--api/api/ebook/select-all")
             .then((response) => response.json())
             .then((data) => setEbooks(data));
         }, []);
@@ -39,7 +39,7 @@ useEffect(() => {
       return(
         <div key={ebook.id}>
           <h1>{ebook.name}</h1>
-          <p>{ebook.email}</p>
+          <p>{ebook.author}</p>
           <IconTrash 
               onClick={() => handleTrashClick(ebook.id)}
               style={{cursor: 'pointer'}}

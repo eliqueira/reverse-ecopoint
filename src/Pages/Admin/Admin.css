@@ -1,0 +1,21 @@
+.for{
+    background-color: #c4c4c4;
+    font-family: 'Gurajada';
+
+}
+
+.for>h1{
+    display: flex;
+    justify-content: center;
+}
+
+.for>img{
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+dd.img{
+    display: flex;
+    justify-content: center;
+}
