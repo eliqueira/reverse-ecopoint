@@ -1,0 +1,51 @@
+.for{
+    background-color: aquamarine;
+    font-family: 'Gurajada';
+    width: 30%;
+    height: 300px;
+    margin: 190px 0 0px 500px;
+}
+
+.dd>h1{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.one{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.two{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.tres{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.one>input{
+    border-radius: 15px;
+    width: 250px;
+    color: black;
+}
+
+.two>input{
+    border-radius: 15px;
+    width: 250px;
+    color: black;
+}
+
+.tres>input{
+    border-radius: 15px;
+    color: black;
+    background-color: #00FF46;
+    width: 90px;
+    font-size: bolder;
+}
