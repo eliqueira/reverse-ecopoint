@@ -28,9 +28,7 @@ function App() {
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:ebookId" element={<EditUserOnChange />} />
         </Route>
-        <Route path='admin' element={<Login/>}>
-          <Route path='ebk-admin' element={<EbookAdmin/>}/> 
-        </Route>
+        <Route path='login-admin' element={<Login/>}/>
         <Route path="*" element={<NotFound />} />
     </Routes>
     </div>

@@ -12,7 +12,7 @@ function Sobre () {
                    <div className='hh'>
                         <h5>Eliel Siqueira</h5>
                        <div className='txt'>
-                            <Card className='card bg bg-dark text-white' border="---" style={{ width: '850px'}}>
+                            <Card className='card bg-dark text-white' border="---" style={{ width: '850px'}}>
                                 <Card.Body>
                                 <Card.Text>
                                     <h4 className='text-center mt-3'>

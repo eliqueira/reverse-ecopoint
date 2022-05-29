@@ -2,7 +2,7 @@
     margin: 20px;
     display: inline-block;
     justify-content: center;
-    width: 26.5%;
+    width: 28.7%;
     background-color: rgb(119, 179, 233);
     border-radius: 25px;
 }
@@ -35,6 +35,7 @@
 .bot:hover{
     background-color:black;
     color: aliceblue;
+    cursor: pointer;
 }
 
 

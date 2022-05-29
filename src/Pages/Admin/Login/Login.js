@@ -1,3 +1,5 @@
+import { Route } from 'react-router-dom'
+import EbookAdmin from '../EbookAdmin/EbookAdmin'
 import './Login.css'
 
 function Login() {
@@ -14,7 +16,9 @@ function Login() {
                             <input type="password" name="password" placeholder="Senha..."/>
                         </div>
                         <div className='tres'>
-                                <input type="submit" value="Logar"/>                            
+                            <Route path='ebk-admin' element={<EbookAdmin/>}>
+                                <input type="submit" value="Logar"/>                                                        
+                            </Route>
                         </div>
                     </form>
                 </div>

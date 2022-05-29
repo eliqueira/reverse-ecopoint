@@ -21,6 +21,7 @@
 
 .point:hover{
     color: #00FF46;
+    cursor: pointer;
 }
 
 .point>h5{
