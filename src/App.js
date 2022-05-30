@@ -7,7 +7,6 @@ import Ebook from './Pages/Ebook/Ebook';
 import EditUserOnChange from './Components/Home/EditUserOnChange'
 import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 import Eco from './Pages/Ecopoint/Ecopoint';
-import Local from './Pages/Ecopoint/Local';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
 import Login from './Pages/Admin/Login/Login';
@@ -21,15 +20,15 @@ function App() {
         <Route path="ebook" element={<Ebook/>} />
         <Route path="ecopoint">
           <Route index element={<Eco/>}/>
-          <Route path="local/:ecopontoId" element={<Local/>}/>
         </Route>
         <Route path="form" element={<FormEbook/>} />
         <Route path="api-integration" >
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:ebookId" element={<EditUserOnChange />} />
         </Route>
-        <Route path='login-admin' element={<Login/>}/>
-        <Route path="*" element={<NotFound />} />
+        <Route path="login" element={<Login/>}/>
+        <Route path="admin" element={<EbookAdmin/>}/>
+        <Route path="*" element={<NotFound />}/>
     </Routes>
     </div>
   );

@@ -1,0 +1,13 @@
+.ft{
+    background-color: rgb(233, 217, 155);
+    height: 530px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon{
+    padding: 70px;
+}

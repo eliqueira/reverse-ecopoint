@@ -1,16 +1,17 @@
 import './Footer.css'
-import { FaIndustry} from "react-icons/fa";
-import { FaArrowLeft} from "react-icons/fa";
+import {FaIndustry, FaArrowLeft} from "react-icons/fa";
+import Link from 'react-router-dom'
+
 
 function Footer () {
     return(
         <section className='ft'>
-            <div className='icon'>
-                {FaIndustry}
-            </div>
-            <div className='icon'>
-                {FaArrowLeft}
-            </div>
+                <Link className='icon' to="eco-admin">
+                    <FaIndustry/>                
+                </Link>
+                <Link className='icon' to="login">
+                    <FaArrowLeft/>                                
+                </Link>
         </section>
     )
 };
