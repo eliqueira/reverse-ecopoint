@@ -1,30 +1,62 @@
-import { Route } from 'react-router-dom'
-import EbookAdmin from '../EbookAdmin/EbookAdmin'
 import './Login.css'
+import { useRef, useEffect } from "react";
+import { useAuth } from "../../../Components/Providers/authProviders";
 
-function Login() {
-    return(
-        <section className="for">
-            <div className='dd'>
-                <h1>LOGIN</h1>
-                <div className='in'>
-                    <form>
-                        <div className='one'>
-                            <input type="email" name="email" placeholder="Email..."/>
-                        </div>
-                        <div className='two'>
-                            <input type="password" name="password" placeholder="Senha..."/>
-                        </div>
-                        <div className='tres'>
-                            <Route path='ebk-admin' element={<EbookAdmin/>}>
-                                <input type="submit" value="Logar"/>                                                        
-                            </Route>
-                        </div>
-                    </form>
-                </div>
-                </div>
-        </section>
+const Login = () => {
+
+    const emailRef = useRef();
+    const passRef = useRef();
+
+    const { setIsLogged, setUserLogged, isLogged, userLogged } = useAuth();
+
+    useEffect(() => {
+        emailRef.current.focus()
+    },[])
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const formData = new FormData();
+        formData.append('email', event.target[0].value);
+        formData.append('pass', event.target[1].value);
+        fetch(
+          "http://localhost/lp2/api/auth/login",
+          {method: 'POST', body: formData}
+        )
+          .then(async (response) => {
+                if(response.status === 200){
+                    let data = await response.json()
+                    setIsLogged(true)
+                    setUserLogged(data.session)
+                    localStorage.setItem('userLogged', JSON.stringify(data.session));
+                } else {
+                    let data = await response.json()
+                    data?.message
+                        ? alert(data.message)
+                        : alert('Erro ao Logar!')
+                }
+            })
+    } 
+
+    return (
+        <>
+            <h1>Login</h1>
+            <form onSubmit={(event) => handleSubmit(event)}>
+            <label>Email:</label><input ref={emailRef} type="email" name="email"/>
+            <label>Senha:</label><input ref={passRef} type="password" name="pass"/>
+            <input type="submit" value="Logar" />
+            </form>
+            <h1>User Logged</h1>
+            { isLogged
+                ? (<span>isLogged True</span>)
+                : (<span>isLogged False</span>)
+            }
+            <br />
+            <p>
+                {JSON.stringify(userLogged)}
+            </p>
+            
+        </>
     )
-};
+}
 
 export default Login

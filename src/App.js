@@ -11,6 +11,7 @@ import Local from './Pages/Ecopoint/Local';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
 import Login from './Pages/Admin/Login/Login';
+import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
 
 function App() {
   return (
@@ -28,7 +29,12 @@ function App() {
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:ebookId" element={<EditUserOnChange />} />
         </Route>
-        <Route path='login-admin' element={<Login/>}/>
+        <Route path='admin/login' element={<Login />} />
+              <Route path='admin/' element={<EbookAdmin />}>
+                    <Route index element={<APIIntegration />}/>
+                    <Route path="edit/:userId" element={<EditUserOnChange />} />
+                    <Route path="cadastra-ebook/" element={<EbookCadastro />} />
+              </Route>
         <Route path="*" element={<NotFound />} />
     </Routes>
     </div>

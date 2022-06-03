@@ -1,7 +1,11 @@
 import './EbookAdmin.css'
 import Head from './Head/Head'
+import { useAllowedRole } from '../../../Components/Providers/authProviders';
 
-function EbookAdmin () {
+const EbookAdmin = () => {
+
+    useAllowedRole('admin', '/admin/login')
+
     return(
         <Head/>
     )
