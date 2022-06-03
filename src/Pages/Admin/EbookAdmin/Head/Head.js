@@ -1,5 +1,5 @@
 import './Head.css'
-import logo from '../../../../Assets/img/Fundo.svg'
+import logo from '../../../../Assets/img/Logo.svg'
 
 function Head() {
     return(

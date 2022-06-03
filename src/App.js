@@ -7,7 +7,6 @@ import Ebook from './Pages/Ebook/Ebook';
 import EditUserOnChange from './Components/Home/EditUserOnChange'
 import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 import Eco from './Pages/Ecopoint/Ecopoint';
-import Local from './Pages/Ecopoint/Local';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
 import Login from './Pages/Admin/Login/Login';
@@ -22,7 +21,6 @@ function App() {
         <Route path="ebook" element={<Ebook/>} />
         <Route path="ecopoint">
           <Route index element={<Eco/>}/>
-          <Route path="local/:ecopontoId" element={<Local/>}/>
         </Route>
         <Route path="form" element={<FormEbook/>} />
         <Route path="api-integration" >
@@ -36,6 +34,7 @@ function App() {
                     <Route path="cadastra-ebook/" element={<EbookCadastro />} />
               </Route>
         <Route path="*" element={<NotFound />} />
+
     </Routes>
     </div>
   );
