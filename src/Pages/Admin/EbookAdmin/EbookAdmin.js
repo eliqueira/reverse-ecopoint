@@ -1,16 +1,14 @@
 import './EbookAdmin.css'
 import Head from './Head/Head'
-import { useAllowedRole } from '../../../Components/Providers/authProviders';
 import Footer from './Footer/Footer'
+import Cards from './Cards/Cards'
 
 function EbookAdmin () {
-
-    useAllowedRole('admin', '/admin/login')
-
     return(
         <>
         <Head/>
-        <Footer/>        
+        <Footer/>  
+        <Cards/>    
         </>
     )
 };

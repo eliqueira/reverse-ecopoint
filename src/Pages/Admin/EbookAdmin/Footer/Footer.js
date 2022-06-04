@@ -1,6 +1,6 @@
 import './Footer.css'
 import {FaIndustry, FaArrowLeft} from "react-icons/fa";
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 function Footer () {

@@ -10,4 +10,11 @@
 
 .icon{
     padding: 70px;
+    color: black;
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    color: rgb(66, 66, 173);
 }

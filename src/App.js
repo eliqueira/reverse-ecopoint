@@ -27,12 +27,8 @@ function App() {
             <Route index element={<ApiIntegrantion />}/>
             <Route path="edit/:ebookId" element={<EditUserOnChange />} />
         </Route>
-        <Route path='admin/login' element={<Login />} />
-              <Route path='admin/' element={<EbookAdmin />}>
-                    <Route index element={<APIIntegration />}/>
-                    <Route path="edit/:userId" element={<EditUserOnChange />} />
-                    <Route path="cadastra-ebook/" element={<EbookCadastro />} />
-              </Route>
+        <Route path='/admin/login' element={<Login />} />
+              <Route path='admin' element={<EbookAdmin />}/>
         <Route path="*" element={<NotFound />} />
 
     </Routes>
