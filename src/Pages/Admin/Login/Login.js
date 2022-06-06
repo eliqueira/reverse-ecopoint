@@ -46,13 +46,13 @@ const Login = () => {
             <input type="submit" value="Logar" />
             </form>
             <h1>User Logged</h1>
-            { isLogged
+            { true
                 ? (<span>isLogged True</span>)
                 : (<span>isLogged False</span>)
             }
             <br />
             <p>
-                {JSON.stringify(userLogged)}
+               
             </p>
             
         </>

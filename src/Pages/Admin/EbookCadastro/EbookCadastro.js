@@ -1,7 +1,7 @@
 import { useRef, useEffect} from 'react'
 import { useAuth } from '../../../Components/Providers/authProviders';
 
-const EbookCadastro = ({ebook, setEbooks}) => {
+const EbookCadastro = ({ebookCadasro, setEbookCadastro}) => {
 
   const nameRef = useRef();
   const authorRef = useRef();

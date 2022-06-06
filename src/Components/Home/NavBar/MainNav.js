@@ -10,21 +10,23 @@ function MainNav ()  {
         <>
         <Nav className="head">
             <Logo/>
-            <Nav.Item className="n fs-4">
-                <a className="na" href="#sobre">
-                    Sobre
-                </a>
-            </Nav.Item>
-            <Nav.Item className ="n fs-4">
-                <Link className="na" to="ebook">
-                    E-books                
-                </Link>
-            </Nav.Item>
-            <Nav.Item className ="n fs-4">
-                <Link  className="na" to="ecopoint">
-                    Ecopontos                
-                </Link>
-            </Nav.Item>
+            <div className="d-flex">
+                <Nav.Item className="n fs-4">
+                    <a className="na" href="#sobre">
+                        Sobre
+                    </a>
+                </Nav.Item>
+                <Nav.Item className ="n fs-4">
+                    <Link className="na" to="ebook">
+                        E-books                
+                    </Link>
+                </Nav.Item>
+                <Nav.Item className ="n fs-4">
+                    <Link  className="na" to="ecopoint">
+                        Ecopontos                
+                    </Link>
+                </Nav.Item>
+            </div>
             <Logo2/>
         </Nav>      
         </>

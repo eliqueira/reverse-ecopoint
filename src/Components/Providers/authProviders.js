@@ -34,7 +34,7 @@ const AuthProvider = ({children}) => {
 
 export const useAuth = () => {
    const [isLogged, setIsLogged, userLogged, setUserLogged, userLoaded] = useContext(AuthContext)
-   return {isLogged, setIsLogged, userLogged, setUserLogged, userLoaded}
+   return {ised, LoggsetIsLogged, userLogged, setUserLogged, userLoaded}
 }
 
 export const useAllowedRole = (role, redirectRoute) => {

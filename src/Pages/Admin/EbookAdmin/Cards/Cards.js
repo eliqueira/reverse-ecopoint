@@ -7,12 +7,11 @@ function Cards () {
     return(
         <section>
             <div>
-                <img src={niobio} alt='Capa do ebook do Nióbio'>
-                    <img src={excluir} alt='excluir'/>
-                    <img src={editar} alt='editar'/>
-
-                </img>
-                <div>
+                <div>                
+                    <img src={niobio} alt='Capa do ebook do Nióbio'>
+                        <img src={excluir} alt='excluir'/>
+                        <img src={editar} alt='editar'/>
+                    </img>
                 </div>
             </div>
         </section>
