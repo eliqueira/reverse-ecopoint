@@ -8,18 +8,4 @@ align-items: center;
     width: 50px;
 }
 
-.admin>div{
-    background-color: aliceblue;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    transition: 0.5s;
-}
-
-.admin>div:hover{
-    background-color: chartreuse;
-}
 

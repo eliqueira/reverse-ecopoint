@@ -28,8 +28,8 @@ function App() {
             <Route path="edit/:ebookId" element={<EditUserOnChange />} />
         </Route>
         {/* <Route path='login' element={<Login />} /> */}
-        <Route path='admin' element={<EbookAdmin />}/>
-        <Route path='/create' element={<EbookCadastro/>}/>
+        <Route path='/admin' element={<EbookAdmin />}/>
+        <Route path='create' element={<EbookCadastro/>}/>
         <Route path="*" element={<NotFound />} />
     </Routes>
     </div>
