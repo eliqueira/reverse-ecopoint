@@ -5,13 +5,13 @@ import {TiEdit as IconEdit} from 'react-icons/ti'
 import { useNavigate } from 'react-router-dom'
 
 const ApiIntegrantion = () => {
-const [Ebooks, setEbooks] = useState(0);
+const [Ebook, setEbook] = useState(0);
 const navigate = useNavigate();
 
 useEffect(() => {
             fetch("http://localhost/reverse--api/api/ebook/select-all")
             .then((response) => response.json())
-            .then((data) => setEbooks(data));
+            .then((data) => setEbook(data));
         }, []);
 
         const handleTrashClick = (EbookId) => {
@@ -25,21 +25,22 @@ useEffect(() => {
             .then((response) => response.json())
             .then((data) => {
               alert(data.message)
-              let EbookFiltered = Ebooks.filter((ebook) => { return ebook.id !== EbookId});
-              setEbooks(EbookFiltered)
+              let EbookFiltered = Ebook.filter((ebook) => { return ebook.id !== EbookId});
+              setEbook(EbookFiltered)
             });
         }
         
 
   return (
     <>
-    <FormEbook setEbooks={setEbooks} Ebooks={Ebooks}/>
-    {Ebooks &&
-      Ebooks.map((ebook) =>{
+    <FormEbook setEbook={setEbook} Ebook={Ebook}/>
+    {Ebook &&
+      Ebook.map((ebook) =>{
       return(
         <div key={ebook.id}>
           <h1>{ebook.name}</h1>
           <p>{ebook.author}</p>
+          <p>{ebook.photo}</p>
           <IconTrash 
               onClick={() => handleTrashClick(ebook.id)}
               style={{cursor: 'pointer'}}
