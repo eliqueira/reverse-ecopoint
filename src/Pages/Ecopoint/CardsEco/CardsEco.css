@@ -1,22 +1,22 @@
-.cardin{
+.cardin-eco{
     margin: 20px;
     display: inline-block;
     justify-content: center;
-    width: 28.7%;
+    width: 27%;
     background-color: rgb(119, 179, 233);
     border-radius: 25px;
 }
 
-.cardin>img{
+.cardin-eco>img{
     padding: 20px;
     width: 360px;
 }
 
-.cardin>h1{
+.cardin-eco>h1{
     margin-left: 23px;
 }
 
-.cardin>h3{
+.cardin-eco>h3{
     margin-left: 23px;
 }
 

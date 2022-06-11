@@ -10,28 +10,27 @@ import Eco from './Pages/Ecopoint/Ecopoint';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
 // import Login from './Pages/Admin/Login/Login';
-import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
+// import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
 
 function App() {
   return (
     <div className="App">
-
-    <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="ebook" element={<Ebook/>} />
-        <Route path="ecopoint">
-          <Route index element={<Eco/>}/>
-        </Route>
-        <Route path="form" element={<FormEbook/>} />
-        <Route path="api-integration" >
-            <Route index element={<ApiIntegrantion />}/>
-            <Route path="edit/:ebookId" element={<EditUserOnChange />} />
-        </Route>
-        {/* <Route path='login' element={<Login />} /> */}
-        <Route path='/admin' element={<EbookAdmin />}/>
-        <Route path='create' element={<EbookCadastro/>}/>
-        <Route path="*" element={<NotFound />} />
-    </Routes>
+      <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="ebook" element={<Ebook/>} />
+          <Route path="ecopoint">
+            <Route index element={<Eco/>}/>
+          </Route>
+          <Route path="form" element={<FormEbook/>} />
+          <Route path="api-integration" >
+              <Route index element={<ApiIntegrantion />}/>
+              <Route path="edit/:ebookId" element={<EditUserOnChange />} />
+          </Route>
+          {/* <Route path='login' element={<Login />} /> */}
+          <Route path='/admin' element={<EbookAdmin />}/>
+          {/* <Route path='create' element={<EbookCadastro/>}/> */}
+          <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
