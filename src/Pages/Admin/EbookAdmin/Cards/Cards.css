@@ -1,0 +1,12 @@
+.imagens {
+    display: inline-flex;
+}
+
+.imagens>img{
+    width: 300px;
+}
+
+.botao{
+    width: 25px;
+}
+

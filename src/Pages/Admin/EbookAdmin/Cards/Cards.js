@@ -5,17 +5,16 @@ import editar from '../../../../Assets/img/editar.svg'
 
 function Cards () {
     return(
-        <section>
-            <div>
-                <div>                
-                    <img src={niobio} alt='Capa do ebook do Nióbio'>
+        <>
+                <div className="imagens">                
+                    <img src={niobio} alt='Capa do ebook do Nióbio'/>
+                </div>
+                    <span className='botao'>
                         <img src={excluir} alt='excluir'/>
                         <img src={editar} alt='editar'/>
-                    </img>
-                </div>
-            </div>
-        </section>
+                    </span>        
+        </>
     )
-};
+}
 
 export default Cards

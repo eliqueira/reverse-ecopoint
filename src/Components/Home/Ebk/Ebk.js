@@ -1,12 +1,13 @@
 import './Ebk.css'
 import { Link } from 'react-router-dom'
-import niobio from "../../../Assets/img/Nióbio.svg"
-import comida from "../../../Assets/img/comida.svg"
+import  niobio from '../../../Assets/img/Nióbio.svg'
+import comida from '../../../Assets/img/comida.svg'
 
 
 function Ebk () {
     return(
         <>
+        {/* <section> */}
         <div className="e">
             <h1>E-BOOKS</h1>
             <Link className='bk' to="ebook">
@@ -62,6 +63,7 @@ function Ebk () {
                 </div>
             </div>
         </div>
+        {/* </section> */}
         </>
     )
 };

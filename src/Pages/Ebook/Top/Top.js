@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Top () {
     return(
-        <section className='i'>
+        <section className='inicio'>
                     <Link to='/' className='m'>
                     <div>
                         <Link to='/' className='text'>Voltar</Link>

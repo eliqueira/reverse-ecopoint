@@ -5,7 +5,6 @@ import { BsArrowDown } from "react-icons/bs";
 
 function Inicio ()  {
     return (
-    <>
         <div className="ini">
             <h1>
                 Saiba como se conscientizar
@@ -24,7 +23,6 @@ function Inicio ()  {
                 <BsArrowDown/>
             </div>
         </div>
-    </>
     )
 };
 

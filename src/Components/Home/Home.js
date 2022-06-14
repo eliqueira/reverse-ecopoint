@@ -9,15 +9,15 @@ import Fim from "./Fim/Fim"
 
 function Home() {
     return (
-    <>
-    <Header />
-    <Inicio />
-    <Objectiv/>
-    <Ecoponto />
-    <Ebk />
-    <Sobre/>
-    <Fim/>
-    </>
+    <section>
+        <Header />
+        <Inicio />
+        <Objectiv/>
+        <Ecoponto />
+        <Ebk />
+        <Sobre/>
+        <Fim/>
+    </section>
     );
 }
   
