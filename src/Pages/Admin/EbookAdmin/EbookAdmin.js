@@ -7,7 +7,7 @@ function EbookAdmin () {
     return(
         <>
         <Head/>
-        <Footer/>  
+        <Footer className='display'/>  
         <Cards/>    
         </>
     )

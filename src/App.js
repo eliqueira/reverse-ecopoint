@@ -9,7 +9,9 @@ import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 import Eco from './Pages/Ecopoint/Ecopoint';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
-// import Login from './Pages/Admin/Login/Login';
+import EditEbook from './Pages/Admin/EbookAdmin/Edit/EditEbook';
+import Login from './Pages/Admin/Login/Login';
+// import Providers from './Components/Providers/AuthProviders'
 // import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
 
 function App() {
@@ -26,10 +28,11 @@ function App() {
               <Route index element={<ApiIntegrantion />}/>
               <Route path="edit/:ebookId" element={<EditUserOnChange />} />
           </Route>
-          {/* <Route path='login' element={<Login />} /> */}
-          <Route path='/admin' element={<EbookAdmin />}/>
-          {/* <Route path='create' element={<EbookCadastro/>}/> */}
-          <Route path="*" element={<NotFound />} />
+            <Route path='login' element={<Login />} />
+            <Route path='/admin' element={<EbookAdmin />}/>
+            {/* <Route path='create' element={<EbookCadastro/>}/> */}
+            <Route path='/edit' element={<EditEbook/>}/>
+            <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
