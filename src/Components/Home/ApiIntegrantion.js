@@ -33,28 +33,27 @@ useEffect(() => {
 
   return (
     <>
-    <FormEbook setEbook={setEbook} Ebook={Ebook}/>
-    {Ebook &&
-      Ebook.map((ebook) =>{
-      return(
-        <div key={ebook.id}>
-          <h1>{ebook.name}</h1>
-          <p>{ebook.author}</p>
-          <p>{ebook.photo}</p>
-          <IconTrash 
-              onClick={() => handleTrashClick(ebook.id)}
-              style={{cursor: 'pointer'}}
-            />
-            <IconEdit 
-              onClick={() => navigate('edit/'+ebook.id)} 
-              style={{cursor: 'pointer'}}
-            />
-        </div>
+      {/* <FormEbook setEbook={setEbook} Ebook={Ebook}/> */}
+      {Ebook ?
+      (
+          Ebook.map((ebook) =>{
+            <div key={ebook.id}>
+              <h1>{ebook.name}</h1>
+              <p>{ebook.author}</p>
+              <p>{ebook.photo}</p>
+              <IconTrash 
+                  onClick={() => handleTrashClick(ebook.id)}
+                  style={{cursor: 'pointer'}}
+                />
+                <IconEdit 
+                  onClick={() => navigate('edit/'+ebook.id)} 
+                  style={{cursor: 'pointer'}}
+                />
+            </div>
+          }
+          )
+        )}
+      </>
       )
-      })
-    }
-    </>
-  )
 }
-
 export default ApiIntegrantion
