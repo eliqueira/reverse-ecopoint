@@ -7,8 +7,10 @@ function EbookAdmin () {
     return(
         <>
         <Head/>
-        <Footer className='display'/>  
-        <Cards/>    
+            <Footer/>  
+        <div class= "d-inline-flex">
+            <Cards/>    
+        </div>
         </>
     )
 };
