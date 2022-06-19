@@ -3,39 +3,39 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 const EditUserOnChange = () => {
 
-    const { userId } = useParams();
-    const [user, setUser] = useState();
+    const { ebookId } = useParams();
+    const [ebook, setEbook] = useState();
     const navigate = useNavigate();
     
 
     useEffect(() => {
-        fetch(`http://localhost/lp2/api/user/select-by-id/?id=${userId}`)
+        fetch(`http://localhost/reverse--api/api/ebook/select-by-id/?id=${ebookId}`)
             .then((response) => {
                 if (response.ok) {
                   return response.json();
                 }
                 throw new Error(response.statusText);
             })
-            .then((data) => setUser(data))
+            .then((data) => setEbook(data))
             .catch((error) => {
                 console.log(error);
             })
-    }, [userId]);
+    }, [ebookId]);
   
     const handleSubmit = (event) => {
         event.preventDefault()
         const formData = new FormData()
-        formData.append('id', userId)
+        formData.append('id', ebookId)
         formData.append('name', event.target[0].value)
-        formData.append('email', event.target[1].value)
-        formData.append('pass', event.target[2].value)
+        formData.append('author', event.target[1].value)
+        formData.append('photo', event.target[2].value)
         fetch(
-            "http://localhost/lp2/api/user/update",
+            "http://localhost/reverse--api/api/ebook/update",
             {method: 'POST', body: formData}
             )
             .then((response) => response.json())
             .then((data) => {
-                if(data?.user?.id){
+                if(data?.ebook?.id){
                     navigate('../');
                 } else if(data?.message){
                     alert(data.message)
@@ -47,16 +47,16 @@ const EditUserOnChange = () => {
     
     const handleChange = (event) => {
         const {name, value} = event.target
-        setUser({...user, [name]: value})
+        setEbook({...ebook, [name]: value})
     } 
   
     return (
         <>
-        {user ? (
+        {ebook ? (
             <form onSubmit={(event) => handleSubmit(event)}>
-                <label>Nome:</label><input type="text" name="name" value={user.name} onChange={handleChange} />
-                <label>Email:</label><input type="email" name="email"  value={user.email} onChange={handleChange} />
-                <label>Senha:</label><input type="password" name="pass"  value={user.pass} onChange={handleChange} />
+                <label>Nome:</label><input type="text" name="name" value={ebook.name} onChange={handleChange} />
+                <label>Autor:</label><input type="text" name="author"  value={ebook.author} onChange={handleChange} />
+                <label>Foto:</label><input type="file" name="photo"  value={ebook.photo} onChange={handleChange} />
                 <input type="submit" value="Editar" />
             </form>
             )

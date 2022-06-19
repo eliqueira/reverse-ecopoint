@@ -1,0 +1,20 @@
+.ft{
+    background-color: rgb(233, 217, 155);
+    height: 530px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon{
+    padding: 70px;
+    color: black;
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    color: rgb(66, 66, 173);
+}

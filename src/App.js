@@ -10,10 +10,11 @@ import Eco from './Pages/Ecopoint/Ecopoint';
 import FormEbook from './Components/Home/FormEbook';
 import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
 import EditEbook from './Pages/Admin/EbookAdmin/Edit/EditEbook';
-import Login from './Pages/Admin/Login/Login';
+// import Login from './Pages/Admin/Login/Login';
 import EcoCadastro from './Pages/Admin/EcoCadastro/EcoCadastro';
+import EcoAdmin from './Pages/Admin/Eco/EcoAdmin'
 // import Providers from './Components/Providers/AuthProviders'
-// import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
+import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
 
 function App() {
   return (
@@ -31,9 +32,11 @@ function App() {
           </Route>
             {/* <Route path='login' element={<Login />} /> */}
             <Route path='/admin' element={<EbookAdmin />}/>
-            {/* <Route path='create' element={<EbookCadastro/>}/> */}
-            <Route path='/eco-edit' element={<EcoCadastro/>}/>
-            <Route path='/ebk-edit' element={<EditEbook/>}/>
+            <Route path='ebk-create' element={<EbookCadastro/>}/>
+            <Route path='ebk-edit' element={<EditEbook/>}/>
+            <Route path='eco-admin' element={<EcoAdmin/>}/>
+            <Route path='admin/eco-admin' element={<EcoAdmin/>}/>
+            <Route path='eco-edit' element={<EcoCadastro/>}/>
             <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
