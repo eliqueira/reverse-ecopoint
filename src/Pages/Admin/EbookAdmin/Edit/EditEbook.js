@@ -1,42 +1,58 @@
-import {useRef, useEffect} from 'react'
+import { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 
-const EditEbook = ({Ebook, setEbook}) => {
-  const nameRef = useRef();
-  const authorRef = useRef();
-  const photoRef = useRef();
+const EditEbook = () => {
 
-  useEffect(() => {
-    nameRef.current.focus()
-  },[])
+    const { ebookId } = useParams();
+    const [ebook, setEbook] = useState();
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        fetch("http://localhost/reverse--api/api/ebook/select-by-id/?id="+ebookId)
+            .then((response) => response.json())
+            .then((data) => setEbook(data));
+    }, [ebookId])
 
     const handleSubmit = (event) => {
-      event.preventDefault()
-      const formData = new FormData();
-      formData.append('name', event.target[0].value);
-      formData.append('author', event.target[1].value);
-      formData.append('photo', event.target[2].value);
-      fetch(
-        "http://localhost/reverse--api/api/ebook/update",
-        {method: 'POST', body: formData}
-        )
-        .then((response) => response.json())
-        .then((data) => {
-        nameRef.current.value = ''
-        authorRef.current.value = ''
-        photoRef.current.value = ''
-        nameRef.current.focus()
-          setEbook([data.ebook ,...Ebook])
-        });
-    }
+        event.preventDefault()
+        const formData = new FormData()
+        formData.append('id', ebookId)
+        formData.append('name', event.target[0].value)
+        formData.append('descricao', event.target[1].value)
+        formData.append('author', event.target[2].value)
+        formData.append('photo', event.target[3].value)
+        fetch(
+            "http://localhost/reverse--api/api/ebook/update",
+            {method: 'POST', body: formData}
+            )
+            .then((response) => response.json())
+            .then((data) => {
+                if(data?.ebook?.id){
+                    navigate('/admin');
+                } else if(data?.message){
+                    alert(data.message)
+                } else {
+                    console.log(data)
+                }
+            })
+    } 
 
-    return(
-    <form onSubmit={(event) => handleSubmit(event)}>
-        <label>Nome:</label><input ref={nameRef} type="text" name="name"/>
-      <label>Autor:</label><input ref={authorRef} type="author" name="author"/>
-      <label>Foto:</label><input ref={photoRef} type="file" name="photo"/>
-        <input type="submit" value="Editar"/>
-    </form>
+    return (
+        <>
+        {ebook ? (
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <label>Nome:</label><input type="text" name="name" defaultValue={ebook.name} />
+                <label>Descrição:</label><input type="text" name="descricao" defaultValue={ebook.descricao} />
+                <label>Autor:</label><input type="text" name="author"  defaultValue={ebook.author} />
+                <label>Foto:</label><input type="photo" name="photo"  defaultValue={ebook.photo} />
+                <label>Texto:</label><input type="text" name="texto"  defaultValue={ebook.texto} />
+                <input type="submit" value="Editar" />
+            </form>
+            )
+        : 
+            (<p>Usuário não encontrado!</p>)
+        }
+        </>
     )
 }
 

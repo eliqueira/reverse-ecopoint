@@ -4,13 +4,23 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/reverse--api/api/ebook/select-all",
-    "url": "http://localhost/reverse--api/api/ebook/select-all",
+    "url": "http://localhost/reverse--api/api/ebook/select-By-Id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-17T19:19:03.816Z",
-    "modified": "2022-06-17T19:19:04.271Z",
+    "modified": "2022-06-21T20:48:07.692Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "28"
+        }
+      ]
+    },
     "tests": []
   }
 ]

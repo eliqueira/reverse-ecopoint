@@ -4,17 +4,19 @@ import { Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './Pages/NotFound'
 import Ebook from './Pages/Ebook/Ebook';
-import EditUserOnChange from './Components/Home/EditUserOnChange'
-import ApiIntegrantion from './Components/Home/ApiIntegrantion'
 import Eco from './Pages/Ecopoint/Ecopoint';
-import FormEbook from './Components/Home/FormEbook';
-import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
-import EditEbook from './Pages/Admin/EbookAdmin/Edit/EditEbook';
 // import Login from './Pages/Admin/Login/Login';
-import EcoCadastro from './Pages/Admin/EcoCadastro/EcoCadastro';
-import EcoAdmin from './Pages/Admin/Eco/EcoAdmin'
 // import Providers from './Components/Providers/AuthProviders'
-import EbookCadastro from './Pages/Admin/EbookCadastro/EbookCadastro'
+import EbookAdmin from './Pages/Admin/EbookAdmin/EbookAdmin'
+import EbookCadastro from './Pages/Admin/EbookAdmin/EbookCadastro/EbookCadastro'
+import Ebooks from './Pages/Admin/EbookAdmin/Ebooks/Ebooks'
+import EditEbook from './Pages/Admin/EbookAdmin/Edit/EditEbook';
+import EcoAdmin from './Pages/Admin/Eco/EcoAdmin'
+import FormEco from './Pages/Admin/Eco/EcoCadastro/FormEco';
+import EcoCadastro from './Pages/Admin/Eco/EcoCadastro/EcoCadastro';
+import Ecoponto from './Pages/Admin/Eco/Ecoponto/Ecoponto';
+import EditEco from './Pages/Admin/Eco/EditEco/EditEco'
+
 
 function App() {
   return (
@@ -22,21 +24,27 @@ function App() {
       <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="ebook" element={<Ebook/>} />
-          <Route path="ecopoint">
-            <Route index element={<Eco/>}/>
-          </Route>
-          <Route path="form" element={<FormEbook/>} />
-          <Route path="api-integration" >
-              <Route index element={<ApiIntegrantion />}/>
-              <Route path="edit/:ebookId" element={<EditUserOnChange />} />
-          </Route>
+          <Route path='eco' element={<Eco/>}/>
             {/* <Route path='login' element={<Login />} /> */}
+
+                            {/* Ebook */}
+
             <Route path='/admin' element={<EbookAdmin />}/>
             <Route path='ebk-create' element={<EbookCadastro/>}/>
-            <Route path='ebk-edit' element={<EditEbook/>}/>
+            <Route path="ebk-edit" >
+                <Route index element={<Ebooks />}/>
+                <Route path="edit/:ebookId" element={<EditEbook />} />
+            </Route>
+
+                            {/* Ecoponto */}
+
             <Route path='eco-admin' element={<EcoAdmin/>}/>
-            <Route path='admin/eco-admin' element={<EcoAdmin/>}/>
-            <Route path='eco-edit' element={<EcoCadastro/>}/>
+            <Route path='eco-create' element={<EcoCadastro/>}/>
+            <Route path="forms" element={<FormEco/>} />
+            <Route path="eco-edit" >
+                <Route index element={<Ecoponto />}/>
+                <Route path="edit/:ecopontoId" element={<EditEco />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

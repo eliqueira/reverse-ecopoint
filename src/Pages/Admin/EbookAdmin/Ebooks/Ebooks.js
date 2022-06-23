@@ -1,11 +1,10 @@
-import FormEbook from "./FormEbook";
-import {BsTrash as IconTrash} from "react-icons/bs"
+import Editar from "../../../../Assets/img/editar.svg"
+import Excluir from "../../../../Assets/img/excluir.svg"
 import { useEffect,useState } from 'react'
-import {TiEdit as IconEdit} from 'react-icons/ti'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 
-const ApiIntegrantion = () => {
-  const [Ebook, setEbook] = useState(0);
+const EditEbook = () => {
+  const [Ebook, setEbook] = useState();
   const navigate = useNavigate();
 
 useEffect(() => {
@@ -32,28 +31,31 @@ useEffect(() => {
 
   return (
   <>
-        <FormEbook setEbook={setEbook} Ebook={Ebook}/>
+  <Link to={'/ebk-create'}> <button Criar Ebook/> </Link>
     {Ebook 
-        && Ebook
+        && 
       (
         Ebook.map((ebook) =>{
+          return(
+
           <div key={ebook.id}>
-              <h1>{ebook.name}</h1>
-              <p>{ebook.author}</p>
-              <p>{ebook.photo}</p>
-            <IconTrash 
-              onClick={() => handleTrashClick(ebook.id)}
-              style={{cursor: 'pointer'}}
-             />
-            <IconEdit 
-               onClick={() => navigate('edit/'+ebook.id)} 
-              style={{cursor: 'pointer'}}
-          />
+              <img src={ebook.photo}/>
+              <div>
+                <img src={Editar} alt='editar' 
+                onClick={() => navigate('/ebk-edit/edit/'+ebook.id)} 
+                style={{cursor: 'pointer'}}
+                />
+                <img src={Excluir} alt='excluir' 
+                onClick={() => handleTrashClick(ebook.id)} 
+                style={{cursor: 'pointer'}}
+                />
+              </div>
         </div>
+          )
         }
         )
       )}
   </>
 )}
     
-export default ApiIntegrantion
+export default EditEbook

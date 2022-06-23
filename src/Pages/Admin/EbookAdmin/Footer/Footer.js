@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 function Footer () {
     return(
         <section className='ft'>
-                <Link className='icon' to="eco-admin">
+                <Link className='icon' to="/eco-admin">
                     <FaIndustry/>                
                 </Link>
                 <Link className='icon' to="login">

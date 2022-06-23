@@ -1,17 +1,16 @@
 import './EcoAdmin.css'
 import Head from '../EbookAdmin/Head/Head'
-import CardsAdmin from './CardsAdmin/CardsAdmin'
 import FooterAdmin from './FooterAdmin/FooterAdmin'
-
+import EditEco from './Ecoponto/Ecoponto'
 
 
 function EcoAdmin () {
     return(
         <>
         <Head/>
-            <FooterAdmin/>
         <div className='d-inline-flex'>
-            <CardsAdmin/>        
+            <FooterAdmin/>
+            <EditEco/>
         </div>
         </>
     )

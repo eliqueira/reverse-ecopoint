@@ -1,15 +1,15 @@
 import './EbookAdmin.css'
 import Head from './Head/Head'
 import Footer from './Footer/Footer'
-import Cards from './Cards/Cards'
+import EditEbook from './Ebooks/Ebooks'
 
 function EbookAdmin () {
     return(
         <>
         <Head/>
-        <div class= "d-inline-flex">
+        <div className= "d-inline-flex">
             <Footer/>  
-            <Cards/>    
+            <EditEbook/>    
         </div>
         </>
     )
