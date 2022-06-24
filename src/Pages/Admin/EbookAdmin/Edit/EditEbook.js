@@ -21,6 +21,7 @@ const EditEbook = () => {
         formData.append('descricao', event.target[1].value)
         formData.append('author', event.target[2].value)
         formData.append('photo', event.target[3].value)
+        formData.append('texto', event.target[3].value)
         fetch(
             "http://localhost/reverse--api/api/ebook/update",
             {method: 'POST', body: formData}

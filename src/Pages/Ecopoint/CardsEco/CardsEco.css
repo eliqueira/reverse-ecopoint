@@ -1,41 +1,9 @@
-.cardin-eco{
-    margin: 20px;
-    display: inline-block;
-    justify-content: center;
-    width: 27%;
-    background-color: #F2F2F2;
+.tudo{
+    width: 350px;
+    border: 3px solid white;
     border-radius: 25px;
-}
-
-.cardin-eco>img{
-    padding: 20px;
-    width: 360px;
-}
-
-.cardin-eco>h1{
-    margin-left: 23px;
-}
-
-.cardin-eco>h3{
-    margin-left: 23px;
-}
-
-.bot{
-    font-family: 'Gurajada';
-    margin: 23px 0 10px 23px;
-    border-radius: 10px;
-    background-color: #00FF46;
-    color: black;
-    width: 85px;
-    font-size: 25px;
-    transition: 0.5s;
-    border: 1px solid black;
-}
-
-.bot:hover{
-    background-color:black;
-    color: aliceblue;
-    cursor: pointer;
+    display: inline-flex;
+    justify-content: space-around;
 }
 
 

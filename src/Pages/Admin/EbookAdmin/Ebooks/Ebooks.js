@@ -31,7 +31,7 @@ useEffect(() => {
 
   return (
   <>
-  <Link to={'/ebk-create'}> <button Criar Ebook/> </Link>
+  <Link to={'/ebk-create'}> <button>Criar Ebook</button> </Link>
     {Ebook 
         && 
       (
@@ -39,7 +39,7 @@ useEffect(() => {
           return(
 
           <div key={ebook.id}>
-              <img src={ebook.photo}/>
+              <img src={ebook.photo} alt='ebooks'/>
               <div>
                 <img src={Editar} alt='editar' 
                 onClick={() => navigate('/ebk-edit/edit/'+ebook.id)} 

@@ -1,4 +1,4 @@
-import { useRef, useEffect,useState} from 'react'
+import { useRef} from 'react'
 import { useNavigate} from 'react-router-dom'
 // import { useAuth } from '../../../Components/Providers/authProviders';
 
@@ -25,9 +25,6 @@ const EbookCadastro = () => {
     fetch("http://localhost/reverse--api/api/ebook/create", {
         method: 'POST',
         body: formData,
-        headers: {
-        //   "Access-Token": userLogged.token
-        }
       })
       .then((response) => response.json())
       .then((data) => {
@@ -37,6 +34,7 @@ const EbookCadastro = () => {
         photoRef.current.value = ''
         textoRef.current.value = ''
         nameRef.current.focus()
+        alert(data.message)
         navigate('/admin/');
       });
   } 

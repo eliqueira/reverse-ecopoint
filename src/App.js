@@ -16,6 +16,7 @@ import FormEco from './Pages/Admin/Eco/EcoCadastro/FormEco';
 import EcoCadastro from './Pages/Admin/Eco/EcoCadastro/EcoCadastro';
 import Ecoponto from './Pages/Admin/Eco/Ecoponto/Ecoponto';
 import EditEco from './Pages/Admin/Eco/EditEco/EditEco'
+import Conteudo from './Pages/Ebook/Conteudo/Conteudo';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 <Route index element={<Ebooks />}/>
                 <Route path="edit/:ebookId" element={<EditEbook />} />
             </Route>
+            <Route path="/conteudo/:ebookId" element={<Conteudo/>}/>
 
                             {/* Ecoponto */}
 

@@ -1,7 +1,7 @@
 import './Cards.css'
-import niobio from '../../../Assets/img/Nióbio.svg'
 import { useEffect, useState} from 'react';
-// import { Card, CardGroup } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap'
 // import { Button } from 'react-bootstrap'
 
 const Cards = () => {
@@ -18,19 +18,22 @@ const Cards = () => {
         {ebook &&
         ebook.map((ebook) => {
             return(
-                <container key={ebook.id} className='d-flex justify-content-center'>
-                    <div className='cardin'>
-                            <img src={ebook.photo} alt='niobio imagem'/>
-                            <h1>{ebook.name}</h1>
-                            <br/>
+                <section className='tudo'>
+                <div key={ebook.id} className='cont'>
+                    <Card.Img  className='w-75' variant="top" src={ebook.photo} alt='Ebooks'/>
+                    <Card.Body>
+                        <Card.Title>{ebook.name}</Card.Title>
+                        <Card.Text>
+                        {ebook.descricao}
+                        </Card.Text>
+                        <Link to={"/conteudo/"+ebook.id}>
                             <h3>
-                               {ebook.descricao}
+                                Ler                                
                             </h3>
-                            <button className='bots'>
-                                Ler
-                            </button>
-                    </div>
-                </container>
+                        </Link>
+                    </Card.Body>
+                </div>
+            </section>
                 )
             })}         
             </>
