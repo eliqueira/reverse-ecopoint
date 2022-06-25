@@ -1,5 +1,5 @@
 import "./Inicio.css"
-import reciclar from '../../../Assets/img/reciclar.svg'
+import reciclar from '../../../Assets/img/reciclar.jpg'
 import { BsArrowDown } from "react-icons/bs";
 
 
@@ -15,8 +15,8 @@ function Inicio ()  {
                 <br></br>
                 resíduos sólidos através
                 de E-books!!!
-                <div>
-                    <img className="imagem" src={reciclar} alt="Imagem do lixo"/>
+                <div className="imagem">
+                    <img  src={reciclar} alt="Imagem do lixo"/>
                 </div>        
             </h1>
             <div className="seta">

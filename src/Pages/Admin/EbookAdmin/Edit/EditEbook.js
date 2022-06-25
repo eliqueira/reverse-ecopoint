@@ -51,7 +51,7 @@ const EditEbook = () => {
             </form>
             )
         : 
-            (<p>Usuário não encontrado!</p>)
+            (<p>Ebook não encontrado!</p>)
         }
         </>
     )

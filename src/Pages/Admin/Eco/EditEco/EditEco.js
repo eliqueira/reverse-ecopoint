@@ -53,7 +53,7 @@ const EditEco = () => {
           </form>  
             )
         : 
-            (<p>Usuário não encontrado!</p>)
+            (<p>Ecoponto não encontrado!</p>)
         }
         </>
     )

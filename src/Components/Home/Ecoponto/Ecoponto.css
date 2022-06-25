@@ -28,17 +28,11 @@
     font-size: 35px;
 }
 
-.image{
-    display: flex;
-    justify-content: center;
+.ecc{
+    display: inline-flex;
 }
 
-.ec>img{
-    padding: 15px;
-    width: 430px;
+.e>img{
+    width: 370px;
 }
 
-.ec>h5{
-    margin-left: 19px;
-    height: 50px;
-}

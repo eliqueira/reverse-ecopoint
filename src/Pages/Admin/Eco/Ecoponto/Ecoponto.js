@@ -31,7 +31,7 @@ useEffect(() => {
 
   return (
   <>
-  <Link to={'/eco-create'}> <button>Criar Ebook</button></Link>
+<Link to={'/eco-create'}> <button>Criar Ecoponto</button></Link>
     {Ecoponto 
         && 
       (
@@ -42,7 +42,7 @@ useEffect(() => {
               <img src={ecoponto.photo} alt='ecopontos'/>
               <div>
                 <img src={Editar} alt='editar' 
-                onClick={() => navigate('edit/'+ecoponto.id)} 
+                onClick={() => navigate('/eco-edit/edit/'+ecoponto.id)} 
                 style={{cursor: 'pointer'}}
                 />
                 <img src={Excluir} alt='excluir' 
@@ -50,11 +50,11 @@ useEffect(() => {
                 style={{cursor: 'pointer'}}
                 />
               </div>
-        </div>
+          </div>
           )
         }
         )
-      )}
+        )}
   </>
 )}
     

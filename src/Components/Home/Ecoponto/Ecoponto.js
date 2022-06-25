@@ -1,8 +1,6 @@
 import './Ecoponto.css'
-// import {Button} from 'react-bootstrap';
 import {Link,useParams} from 'react-router-dom'
 import {useEffect, useState } from 'react'
-import {Button} from 'react-bootstrap'
 
 const Ecoponto = () => {
     const {ecoId} = useParams();
@@ -23,12 +21,12 @@ const Ecoponto = () => {
                 {eco &&
                 eco.map((eco) =>{
                     return(
-                        <div key={eco.id} className='image'>
-                            <div className='ec'>
+                        <div key={eco.id}>
+                            <div>
+                                <Link to='eco' className='e'>
                                     <img src={eco.photo} alt="Ecoponto"/>
-                                <Button href={eco.localizacao}>
                                     <h5>{eco.name}</h5>                            
-                                </Button>
+                                </Link>
                             </div>
                         </div>
 

@@ -1,11 +1,16 @@
-.social{
+.um{
 display: flex;
 align-items: center;
 }
 
 .social>img{
     padding: 10px;
-    width: 50px;
+    width: 40px;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
+.social>img:hover{
+    color: chartreuse;
+}
 
