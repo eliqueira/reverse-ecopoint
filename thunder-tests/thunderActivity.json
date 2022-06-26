@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/reverse--api/api/ebook/select-all",
-    "url": "http://localhost/reverse--api/api/ebook/select-By-Id",
+    "url": "http://localhost/reverse--api/api/ecoponto/select-by-Id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-17T19:19:03.816Z",
-    "modified": "2022-06-21T20:48:07.692Z",
+    "modified": "2022-06-26T01:30:06.092Z",
     "headers": [],
     "params": [],
     "body": {
@@ -17,7 +17,7 @@
       "form": [
         {
           "name": "id",
-          "value": "28"
+          "value": "15"
         }
       ]
     },

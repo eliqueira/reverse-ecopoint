@@ -1,9 +1,9 @@
-import {useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import {useNavigate} from 'react-router-dom'
 
 
 
-const FormEco = ({Ecoponto, setEcoponto}) => {
+const FormEco = () => {
   const nameRef = useRef();
   const numberRef = useRef();
   const adressRef = useRef();
@@ -11,11 +11,6 @@ const FormEco = ({Ecoponto, setEcoponto}) => {
   const photoRef = useRef();
   const localizacaoRef = useRef();
   const navigate = useNavigate ();
-
-  useEffect(() => {
-    nameRef.current.focus()
-  },[])
-
 
     const handleSubmit = (event) => {
       event.preventDefault()
@@ -39,10 +34,9 @@ const FormEco = ({Ecoponto, setEcoponto}) => {
         photoRef.current.value = ''
         localizacaoRef.current.value = ''
         nameRef.current.focus()
-          setEcoponto([data.ecoponto ,...Ecoponto])
-        });
+        alert(data.message)
         navigate('/eco-admin/');
-
+        });
     }
 
     return(
