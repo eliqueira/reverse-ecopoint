@@ -32,14 +32,12 @@ useEffect(() => {
 
 
   return (
-    <>
-    <Buton/>
+    <div  className='aaa'>
     {Ecoponto 
         && 
-      (
+        (
         Ecoponto.map((ecoponto) =>{
           return(
-          <div className='aaa'>
             <div key={ecoponto.id} className='im'>
                 <img  src={ecoponto.photo} alt='ecopontos'/>
                 <div>
@@ -53,12 +51,12 @@ useEffect(() => {
                   />
                 </div>
             </div>
-          </div>
           )
         }
         )
         )}
-  </>
+        <Buton/>
+  </div>
 )}
     
 export default Ecoponto

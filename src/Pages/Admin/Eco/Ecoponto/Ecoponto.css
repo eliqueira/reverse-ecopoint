@@ -1,9 +1,4 @@
-.aaa{
-    display: inline-flex;
-}
-
 .im{
-    width: 100%;
     padding:10px;
 }
 .im>img{
@@ -11,4 +6,10 @@
     width:205px !important;
     height:205px !important;
     border:3px solid black;
+}
+
+.aaa{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }

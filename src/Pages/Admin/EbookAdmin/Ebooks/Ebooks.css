@@ -25,3 +25,9 @@
     height:205px !important;
     border:3px solid black;
 }
+
+.ajj{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

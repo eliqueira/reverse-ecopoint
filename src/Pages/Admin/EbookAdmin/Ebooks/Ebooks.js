@@ -31,8 +31,7 @@ useEffect(() => {
 
 
   return (
-  <>
-  <Link  className='ll' to={'/ebk-create'}> <button>Criar Ebook</button> </Link>
+  <div className='ajj'>
     {Ebook 
         && 
       (
@@ -55,8 +54,9 @@ useEffect(() => {
           )
         }
         )
-      )}
-  </>
+        )}
+        <Link  className='ll' to={'/ebk-create'}> <button>Criar Ebook</button> </Link>
+  </div>
 )}
     
 export default EditEbook
