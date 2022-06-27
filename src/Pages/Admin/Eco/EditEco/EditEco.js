@@ -1,3 +1,4 @@
+import './EditEco.css'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
@@ -39,22 +40,22 @@ const EditEco = () => {
     } 
 
     return (
-        <>
+        <div className='stt'>
         {ecoponto ? (
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <form className='pio' onSubmit={(event) => handleSubmit(event)}>
             <label>Nome:</label><input type="text" name="name" defaultValue={ecoponto.name}/>
             <label>Telefone:</label><input type="tel" id="fone" name="phone" defaultValue={ecoponto.phone}/>
             <label>Endereço:</label><input type="text" name="adress" defaultValue={ecoponto.adress}/>
             <label>Número:</label><input type="tel" name="numero" defaultValue={ecoponto.numero}/>
             <label>Foto:</label><input type="text" name="photo" defaultValue={ecoponto.photo}/>
             <label>Localização:</label><input type="text" name="localizacao" defaultValue={ecoponto.localizacao}/>
-            <input type="submit" value="Editar"/>
+            <input className='cades' type="submit" value="Editar"/>
           </form>  
             )
         : 
             (<p>Ecoponto não encontrado!</p>)
         }
-        </>
+        </div>
     )
 }
 

@@ -3,6 +3,7 @@ import Editar from "../../../../Assets/img/editar.svg"
 import Excluir from "../../../../Assets/img/excluir.svg"
 import { useEffect,useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom'
+import Buton from './Buton'
 
 const Ecoponto = () => {
   const [Ecoponto, setEcoponto] = useState();
@@ -31,26 +32,27 @@ useEffect(() => {
 
 
   return (
-  <>
-  <Link className='ol' to={'/eco-create'}> <button>Criar Ecoponto</button></Link>
+    <>
+    <Buton/>
     {Ecoponto 
         && 
       (
         Ecoponto.map((ecoponto) =>{
           return(
-
-          <div key={ecoponto.id} className='im'>
-              <img  src={ecoponto.photo} alt='ecopontos'/>
-              <div>
-                <img src={Editar} alt='editar' 
-                onClick={() => navigate('/eco-edit/edit/'+ecoponto.id)} 
-                style={{cursor: 'pointer'}}
-                />
-                <img src={Excluir} alt='excluir' 
-                onClick={() => handleTrashClick(ecoponto.id)} 
-                style={{cursor: 'pointer'}}
-                />
-              </div>
+          <div className='aaa'>
+            <div key={ecoponto.id} className='im'>
+                <img  src={ecoponto.photo} alt='ecopontos'/>
+                <div>
+                  <img src={Editar} alt='editar' 
+                  onClick={() => navigate('/eco-edit/edit/'+ecoponto.id)} 
+                  style={{cursor: 'pointer'}}
+                  />
+                  <img src={Excluir} alt='excluir' 
+                  onClick={() => handleTrashClick(ecoponto.id)} 
+                  style={{cursor: 'pointer'}}
+                  />
+                </div>
+            </div>
           </div>
           )
         }

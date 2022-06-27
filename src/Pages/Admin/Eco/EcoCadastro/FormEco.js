@@ -1,3 +1,4 @@
+import './FormEco.css'
 import {useRef} from 'react'
 import {useNavigate} from 'react-router-dom'
 
@@ -40,18 +41,20 @@ const FormEco = () => {
     }
 
     return(
-      <>
-        <h1>Cadastro</h1>
-      <form onSubmit={(event) => handleSubmit(event)}>
-        <label>Nome:</label><input ref={nameRef} type="text" name="name"/>
-        <label>Telefone:</label><input ref={phoneRef} type="tel" id="fone" required pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" placeholder="11 9999-9999" name="phone"/>
-        <label>Endereço:</label><input ref={adressRef} type="text" name="adress"/>
-        <label>Número:</label><input ref={numeroRef} type="tel" name="numero"/>
-        <label>Foto:</label><input ref={photoRef} type="text" name="photo"/>
-        <label>Localização:</label><input ref={localizacaoRef} type="text" name="localizacao"/>
-        <input type="submit" value="Cadastrar"/>
-      </form>      
-      </>
+      <div className='ppp'>
+        <div className='ooo'>
+          <h1>Cadastro</h1>
+        <form className='ttt' onSubmit={(event) => handleSubmit(event)}>
+          <label>Nome:</label><input ref={nameRef} type="text" name="name"/>
+          <label>Telefone:</label><input ref={phoneRef} type="tel" id="fone" required pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" placeholder="11 9999-9999" name="phone"/>
+          <label>Endereço:</label><input ref={adressRef} type="text" name="adress"/>
+          <label>Número:</label><input ref={numeroRef} type="tel" name="numero"/>
+          <label>Foto:</label><input ref={photoRef} type="text" name="photo"/>
+          <label>Localização:</label><input ref={localizacaoRef} type="text" name="localizacao"/>
+          <input className='cadis' type="submit" value="Cadastrar"/>
+        </form>      
+        </div>
+      </div>
     )
 }
 

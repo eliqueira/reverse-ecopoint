@@ -1,3 +1,4 @@
+import './EditEbook.css'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
@@ -38,21 +39,21 @@ const EditEbook = () => {
     } 
 
     return (
-        <>
+        <div className='tre'>
         {ebook ? (
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <form className='tii' onSubmit={(event) => handleSubmit(event)}>
                 <label>Nome:</label><input type="text" name="name" defaultValue={ebook.name} />
                 <label>Descrição:</label><input type="text" name="descricao" defaultValue={ebook.descricao} />
                 <label>Autor:</label><input type="text" name="author"  defaultValue={ebook.author} />
                 <label>Foto:</label><input type="photo" name="photo"  defaultValue={ebook.photo} />
                 <label>Texto:</label><input type="text" name="texto"  defaultValue={ebook.texto} />
-                <input type="submit" value="Editar" />
+                <input className='cados' type="submit" value="Editar" />
             </form>
             )
         : 
             (<p>Ebook não encontrado!</p>)
         }
-        </>
+        </div>
     )
 }
 

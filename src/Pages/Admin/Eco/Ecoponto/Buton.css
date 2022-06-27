@@ -1,0 +1,16 @@
+.ol{
+    padding:7px;
+    font-family:'Gurajada';
+}
+
+.ol>button{
+    border-radius: 25px;
+    background-color:black;
+    color: White;
+    transition: 0.5s;
+}
+
+.ol>button:hover{
+    background-color: #6BFF33;
+    color:black;
+}

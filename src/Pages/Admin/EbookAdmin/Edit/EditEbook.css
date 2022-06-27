@@ -1,17 +1,22 @@
-.stt{
+.tre{
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
 }
 
-.pio>input,label{
+.eee>h1{
+    text-align: center;
+    margin: 15px;
+}
+
+.tii>input,label{
     display: flex;
     border-radius: 25px;
     font-family: 'Gurajada';
     font-size: 25px;
 }
 
-.cades{
+.cados{
     margin: 65px;
     border-radius: 25px;
     background-color: black;
@@ -21,7 +26,7 @@
     font-size: 25px;
 }
 
-.cades:hover{
+.cados:hover{
     background-color: chartreuse;
     color: black;
 }

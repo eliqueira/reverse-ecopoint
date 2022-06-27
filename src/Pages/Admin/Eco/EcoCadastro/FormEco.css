@@ -1,27 +1,32 @@
-.stt{
+.ppp{
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
 }
 
-.pio>input,label{
+.ooo>h1{
+    text-align: center;
+    margin: 15px;
+}
+
+.ttt>input,label{
     display: flex;
     border-radius: 25px;
     font-family: 'Gurajada';
     font-size: 25px;
 }
 
-.cades{
-    margin: 65px;
+.cadis{
     border-radius: 25px;
     background-color: black;
     color: white;
     font-family: 'Gurajada';
     transition: 0.5s;
     font-size: 25px;
+    margin: 65px;
 }
 
-.cades:hover{
+.cadis:hover{
     background-color: chartreuse;
     color: black;
 }
