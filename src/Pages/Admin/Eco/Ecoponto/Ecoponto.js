@@ -1,3 +1,4 @@
+import './Ecoponto.css'
 import Editar from "../../../../Assets/img/editar.svg"
 import Excluir from "../../../../Assets/img/excluir.svg"
 import { useEffect,useState } from 'react'
@@ -31,15 +32,15 @@ useEffect(() => {
 
   return (
   <>
-<Link to={'/eco-create'}> <button>Criar Ecoponto</button></Link>
+  <Link className='ol' to={'/eco-create'}> <button>Criar Ecoponto</button></Link>
     {Ecoponto 
         && 
       (
         Ecoponto.map((ecoponto) =>{
           return(
 
-          <div key={ecoponto.id}>
-              <img src={ecoponto.photo} alt='ecopontos'/>
+          <div key={ecoponto.id} className='im'>
+              <img  src={ecoponto.photo} alt='ecopontos'/>
               <div>
                 <img src={Editar} alt='editar' 
                 onClick={() => navigate('/eco-edit/edit/'+ecoponto.id)} 

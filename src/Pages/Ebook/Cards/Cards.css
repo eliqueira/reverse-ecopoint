@@ -1,30 +1,46 @@
-.cardin{
-    margin: 20px;
-    display: inline-block;
-    justify-content: center;
-    width: 27%;
-    background-color:#F2F2F2;
+.www{
+    width: 250px !important;
+    height: 250px;
     border-radius: 25px;
 }
 
-.cardin>img{
-    padding: 20px;
+.uoi{
+    padding: 15px;
+    display: inline-flex;
 }
 
-.cardin>h1{
-    margin-left: 23px;
+.ct{
+    border-radius: 25px;
+    background-color: aliceblue;
+    width: 250px;
 }
 
-.cardin>h3{
-    margin-left: 23px;
+.cta>h3,h5{
+    text-align: center;
 }
 
+.cta>h5{
+    font-weight: lighter;
+}
+
+.boi{
+    text-decoration: none;
+}
+
+.boi>h3{
+    margin: 15px;
+    color: black;
+    border-radius: 25px;
+    background-color: #00FF46;
+    width: 25%;
+    text-align: center;
+}
 .bots{
     margin: 23px 0 10px 23px;
     border-radius: 10px;
     background-color: black;
     color: aliceblue;
-    width: 50px;
+    width:  50px;
     transition: 0.5s;
 }
 

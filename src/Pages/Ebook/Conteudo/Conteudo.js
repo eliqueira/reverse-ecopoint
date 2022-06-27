@@ -1,6 +1,7 @@
 import './Conteudo.css'
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Conteudo = () => {
     const {ebookId} = useParams();
@@ -12,12 +13,17 @@ const Conteudo = () => {
         .then((data) => setEbook(data));
     }, [])
     return(
-        <>
+    <>
+        <Link className='uuu' to='/ebook'>
+            <h3>
+                Voltar                
+            </h3>
+        </Link>
+        <div className='ulo'>
         {ebook &&
         (
                 <container key={ebook.id} className='d-flex justify-content-center'>
-                    <div>
-                            <img src={ebook.photo} alt='niobio imagem'/>
+                    <div className='cnn'>
                             <h1>{ebook.name}</h1>
                             <br/>
                             <h3>
@@ -27,7 +33,8 @@ const Conteudo = () => {
                 </container>
                 )
             }         
-            </>
+        </div>    
+    </>
     )
 };
 

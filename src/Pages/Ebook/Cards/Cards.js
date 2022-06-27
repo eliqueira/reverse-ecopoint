@@ -1,7 +1,6 @@
 import './Cards.css'
 import { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap'
 // import { Button } from 'react-bootstrap'
 
 const Cards = () => {
@@ -18,20 +17,20 @@ const Cards = () => {
         {ebook &&
         ebook.map((ebook) => {
             return(
-                <section className='tudo'>
-                <div key={ebook.id} className='cont'>
-                    <Card.Img  className='w-75' variant="top" src={ebook.photo} alt='Ebooks'/>
-                    <Card.Body>
-                        <Card.Title>{ebook.name}</Card.Title>
-                        <Card.Text>
+            <section className='uoi'>
+                <div key={ebook.id} className='ct'>
+                    <img className='www' variant="top" src={ebook.photo} alt='Ebooks'/>
+                    <div className='cta'>
+                        <h3>{ebook.name}</h3>
+                        <h5>
                         {ebook.descricao}
-                        </Card.Text>
-                        <Link to={"/conteudo/"+ebook.id}>
+                        </h5>
+                        <Link className='boi' to={"/conteudo/"+ebook.id}>
                             <h3>
                                 Ler                                
                             </h3>
                         </Link>
-                    </Card.Body>
+                    </div>
                 </div>
             </section>
                 )

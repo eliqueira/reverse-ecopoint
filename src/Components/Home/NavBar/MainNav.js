@@ -22,7 +22,7 @@ function MainNav ()  {
                     </Link>
                 </Nav.Item>
                 <Nav.Item className ="n fs-4">
-                    <Link  className="na" to="ecopoint">
+                    <Link  className="na" to="eco">
                         Ecopontos                
                     </Link>
                 </Nav.Item>

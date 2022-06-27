@@ -1,10 +1,39 @@
+
+.ii{
+    width: 250px !important;
+    height: 250px;
+    border-radius: 25px;
+}
+
 .tudo{
-    width: 205px;
+    padding: 15px;
     display: inline-flex;
-    justify-content: space-around;
 }
 
 .cont{
-    background-color: #e5e5e9;
+    border-radius: 25px;
+    background-color: aliceblue;
+    width: 250px;
 }
 
+.ill>h3,h5{
+    text-align: center;
+}
+
+.ill>h5{
+    font-weight: lighter;
+}
+
+.bois{
+    text-decoration: none;
+}
+
+.bois>h3{
+    margin: 15px;
+    color: black;
+    border-radius: 25px;
+    background-color: #00FF46;
+    width: 55%;
+    text-align: center;
+    margin: 13px;
+}

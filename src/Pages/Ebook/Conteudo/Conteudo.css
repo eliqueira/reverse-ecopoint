@@ -1,0 +1,26 @@
+.ulo{
+    background-color: #f2f2f2;
+    margin: 25px 75px;
+}
+
+.uuu{
+    text-decoration: none;
+}
+
+.uuu>h3{
+    color: black;
+    border-radius: 25px;
+    background-color: chartreuse;
+    margin: 25px;
+    width: 9%;
+    text-align: center;    
+}
+
+.cnn>h1{
+    text-align: center;
+    margin: 15px;
+}
+.cnn>h3{
+    text-align: justify;
+    margin: 25px;
+}

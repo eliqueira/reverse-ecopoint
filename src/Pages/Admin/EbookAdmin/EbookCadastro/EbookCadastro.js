@@ -1,3 +1,4 @@
+import './EbookCadastro.css'
 import { useRef} from 'react'
 import { useNavigate} from 'react-router-dom'
 // import { useAuth } from '../../../Components/Providers/authProviders';
@@ -40,17 +41,27 @@ const EbookCadastro = () => {
   } 
 
   return (
-    <>
+    <div className='eee'>
     <h1>Cadastro</h1>
-    <form onSubmit={(event) => handleSubmit(event)}>
-      <label>Name:</label><input ref={nameRef} type="text" name="name"/>
-      <label>Descrição:</label><input ref={descricaoRef} type="text" name="descricao"/>
-      <label>Author:</label><input ref={authorRef} type="text" name="author"/>
-      <label>Photo:</label><input ref={photoRef} type="photo" name="photo"/>
-      <label>Texto:</label><input ref={textoRef} type="text" name="texto"/>
-      <input type="submit" value="Cadastrar" />
+    <form className='eii' onSubmit={(event) => handleSubmit(event)}>
+      <label>Nome</label>
+      <input ref={nameRef} type="text" name="name"/>
+
+      <label>Descrição</label>
+      <input ref={descricaoRef} type="text" name="descricao"/>
+
+      <label>Author</label>
+      <input ref={authorRef} type="text" name="author"/>
+
+      <label>Photo</label>
+      <input ref={photoRef} type="photo" name="photo"/>
+
+      <label>Texto</label>
+      <input ref={textoRef} type="text" name="texto"/>
+      
+      <input  className='cads' type="submit" value="Cadastrar" />
     </form>
-    </>
+    </div>
 
   )
 }

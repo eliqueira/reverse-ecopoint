@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 const FormEco = () => {
   const nameRef = useRef();
-  const numberRef = useRef();
+  const phoneRef = useRef();
   const adressRef = useRef();
   const numeroRef = useRef();
   const photoRef = useRef();
@@ -16,7 +16,7 @@ const FormEco = () => {
       event.preventDefault()
       const formData = new FormData();
       formData.append('name', event.target[0].value);
-      formData.append('number', event.target[1].value);
+      formData.append('phone', event.target[1].value);
       formData.append('adress', event.target[2].value);
       formData.append('numero', event.target[3].value);
       formData.append('photo', event.target[4].value);
@@ -28,7 +28,7 @@ const FormEco = () => {
         .then((response) => response.json())
         .then((data) => {
         nameRef.current.value = ''
-        numberRef.current.value = ''
+        phoneRef.current.value = ''
         adressRef.current.value = ''
         numeroRef.current.value = ''
         photoRef.current.value = ''
@@ -44,9 +44,9 @@ const FormEco = () => {
         <h1>Cadastro</h1>
       <form onSubmit={(event) => handleSubmit(event)}>
         <label>Nome:</label><input ref={nameRef} type="text" name="name"/>
-        <label for="number">Número:</label><input ref={numberRef} type="tel" id="fone" required pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" placeholder="11 9999-9999" name="number"/>
+        <label>Telefone:</label><input ref={phoneRef} type="tel" id="fone" required pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" placeholder="11 9999-9999" name="phone"/>
         <label>Endereço:</label><input ref={adressRef} type="text" name="adress"/>
-        <label>Número:</label><input ref={numeroRef} type="tel" name="numero" required pattern="[0-5000]{0-4}"/>
+        <label>Número:</label><input ref={numeroRef} type="tel" name="numero"/>
         <label>Foto:</label><input ref={photoRef} type="text" name="photo"/>
         <label>Localização:</label><input ref={localizacaoRef} type="text" name="localizacao"/>
         <input type="submit" value="Cadastrar"/>

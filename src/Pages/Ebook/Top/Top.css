@@ -3,6 +3,23 @@
 }
 
 .text{
+    background-color: chartreuse;
+    border-radius: 25px;
+    color: black;
+    font-family: 'Gurajada';
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    padding: 7px;
+    margin-left: 25px;
+}
+
+.ola>img{
+    width: 250px;
+    margin-left: 495px;
+}
+
+/* .text{
     text-align: center;
     width: 75px;
     font-family: 'Gurajada';
@@ -11,20 +28,4 @@
     text-decoration: none;
     border-radius: 25%;
     background-color: chartreuse;
-}
-
-.m>div{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
-.m{
-    display: flex;
-    justify-content: center;
-}
-
-.m>img{
-    width: 19rem;
-    padding: 15px;
-}
+} */

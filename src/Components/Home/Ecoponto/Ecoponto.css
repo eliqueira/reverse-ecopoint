@@ -28,11 +28,29 @@
     font-size: 35px;
 }
 
-.ecc{
-    display: inline-flex;
+.ei{
+   display:inline-flex;
+   text-decoration: none;
 }
 
-.e>img{
-    width: 370px;
+.uai{
+    margin: 14px;
 }
+
+.uai>img{
+    width: 370px !important;
+    height: 250px !important;
+    border-radius:25px;
+}
+
+.uai>h5{
+    margin: 15px;
+    color: black;
+}
+
+.oa{
+    display: inline-flex;
+    padding: 25px;
+}
+
 

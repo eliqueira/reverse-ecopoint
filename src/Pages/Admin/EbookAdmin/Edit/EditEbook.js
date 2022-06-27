@@ -29,9 +29,8 @@ const EditEbook = () => {
             .then((response) => response.json())
             .then((data) => {
                 if(data?.ebook?.id){
-                    navigate('/admin');
-                } else if(data?.message){
                     alert(data.message)
+                    navigate('/admin');
                 } else {
                     console.log(data)
                 }

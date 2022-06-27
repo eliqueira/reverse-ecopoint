@@ -21,11 +21,13 @@ const Ecoponto = () => {
                 {eco &&
                 eco.map((eco) =>{
                     return(
-                        <div key={eco.id}>
-                            <div>
-                                <Link to='eco' className='e'>
-                                    <img src={eco.photo} alt="Ecoponto"/>
-                                    <h5>{eco.name}</h5>                            
+                        <div key={eco.id} className='oa'>
+                            <div >
+                                <Link to='eco' className='ei'>
+                                    <div className='uai'>
+                                        <img src={eco.photo} alt="Ecoponto"/>
+                                        <h5>{eco.name}</h5>                            
+                                    </div>
                                 </Link>
                             </div>
                         </div>

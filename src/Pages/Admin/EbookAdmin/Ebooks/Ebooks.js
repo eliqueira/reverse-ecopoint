@@ -1,3 +1,4 @@
+import './Ebooks.css'
 import Editar from "../../../../Assets/img/editar.svg"
 import Excluir from "../../../../Assets/img/excluir.svg"
 import { useEffect,useState } from 'react'
@@ -31,14 +32,14 @@ useEffect(() => {
 
   return (
   <>
-  <Link to={'/ebk-create'}> <button>Criar Ebook</button> </Link>
+  <Link  className='ll' to={'/ebk-create'}> <button>Criar Ebook</button> </Link>
     {Ebook 
         && 
       (
         Ebook.map((ebook) =>{
           return(
-
-          <div key={ebook.id}>
+            
+          <div key={ebook.id} className='w'>
               <img src={ebook.photo} alt='ebooks'/>
               <div>
                 <img src={Editar} alt='editar' 

@@ -1,6 +1,6 @@
 import './CardsEco.css'
 import { useEffect, useState} from 'react';
-import { Card ,Button} from 'react-bootstrap'
+import Link from "@material-ui/core/Link"
 
 const CardsEco = ()  => {
     const [eco, setEco] = useState(null);
@@ -18,19 +18,23 @@ const CardsEco = ()  => {
             return(
                 <section className='tudo'>
                     <div key={eco.id} className='cont'>
-                        <Card.Img  className='w-75 ii' variant="top" src={eco.photo} alt='Ebooks'/>
-                        <Card.Body>
-                            <Card.Title>{eco.name}</Card.Title>
-                            <Card.Text>
-                            {eco.number}
+                        <img  className='ii' variant="top" src={eco.photo} alt='Ebooks'/>
+                        <div className='ill'>
+                            <h3>{eco.name}</h3>
+                            <h5>
+                            {eco.phone}
                             <br/>
                             {eco.adress}
                             <br/>
                             N°
                             {eco.numero}
-                            </Card.Text>
-                            <Button  href={eco.localizacao} variant="primary">Localizar</Button>
-                        </Card.Body>
+                            </h5>
+                            <Link className='bois' href={eco.localizacao}>
+                                <h3>
+                                    Localizar                                
+                                </h3>
+                            </Link>
+                        </div>
                     </div>
                 </section>
             )
